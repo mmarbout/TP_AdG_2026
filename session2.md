@@ -52,7 +52,10 @@ donc pendant ce temps la nous allons installer les packages R nécessaire à l'a
 
 ## analyse d'une matrice d'interaction
 
-commencer par copier le fichier suivant sur gaia
+PS: si vous le souhaitez, voici un lien vers un tutorial du package HiCExperiment :
+[Tuto HiCExperiment](https://jserizay.com/OHCA/docs/devel/pages/data-representation.html)
+
+commencer par copier les fichiers suivant sur gaia
 
 ```sh
 mkdir -p cool_files/
@@ -79,7 +82,11 @@ on peut ensuite commencer à travailler sur nos fichiers cool.
 ```sh
 library(HiCExperiment)
 library(HiContacts)
-coolf <-("cool_files/exemple1.mcool)
+library(GenomicRanges)
+linrary(ggplot2)
+
+
+coolf <-("cool_files/exemple1.mcool")
 cf <- CoolFile(coolf)
 ```
 
@@ -90,7 +97,6 @@ Plusieurs « emplacements » (c'est-à-dire des éléments d'information) sont a
 * Optionnellement, le chemin d'accès à un fichier de paires correspondantes
 * Certaines métadonnées.
 
-
 ```sh
 cf
 resolution(cf)
@@ -98,32 +104,101 @@ pairsFile(cf)
 metadata(cf)
 availableResolutions(cf)
 availableChromosomes(cf)
+```
+
+NB: Les objets ContactFile ne sont que des connexions à un fichier HiC stocké sur disque. Bien que des métadonnées soient disponibles, ils ne contiennent pas les données elles-mêmes !
+
+
+on peut ensuite créer un object HiCExperiment a partir de cette connexion:
+
+```sh
+hic <- import(cf, resolution=5000)
+```
+
+```sh
 interactions(hic)
+```
+
+il est ensuite possible de mettre ces données sous forme de data frame.
+
+```sh
+data <- as.data.frame(hic)
 ```
 
 on peut également importer les données uniquement pour une région donnée:
 
 ```sh
+hic_zoom <- import(cf, resolution=1000, focus="NC_000913.3:1-500000")
+interactions(hic_zoom)
+```
+
+il existe ensuite une fonction pour visualiser directement la matrice:
+
+```sh
 plotMatrix(hic)
 ```
 
 ```sh
-plotMatrix(hic)
+plotMatrix(hic_zoom)
 ```
 
 et oui c'est aussi simple que cela !!! 
 mais il existe pleins d'arguments à la fonction plotMatrix qui permettent de modifier l'image (voir l'aide).
 
 
+on peut réaliser différentes opérations sur ces données:
 
+* visualiser la couverture du génome
 
+```sh
+gi  <- interactions(hic)
+id1 <- anchors(gi, type = "first",  id = TRUE)
+id2 <- anchors(gi, type = "second", id = TRUE)
+is_diag <- (id1 == id2) 
+bins_diag <- anchors(gi[is_diag], type = "first")
+bins_diag$count <- scores(hic, "count")[is_diag]
+all_bins <- regions(hic)
+all_bins$count <- 0L
+hits <- findOverlaps(bins_diag, all_bins, type = "equal")
+all_bins$count[subjectHits(hits)] <- bins_diag$count[queryHits(hits)]
 
+df <- data.frame(
+  pos   = (start(all_bins) + end(all_bins)) / 2,
+  count = all_bins$count,
+  chr   = as.character(seqnames(all_bins))
+)
 
+ggplot(df, aes(x = pos / 1e6, y = count)) +
+  geom_area(fill = "steelblue", alpha = 0.4) +
+  geom_line(colour = "steelblue", linewidth = 0.3) +
+  facet_wrap(~ chr, scales = "free_x", ncol = 1) +
+  labs(
+    x     = "Position (Mb)",
+    y     = "Interactions intra-bin (count)",
+    title = "Couverture Hi-C — diagonale (self-interactions)"
+  ) +
+  theme_minimal()
+```
+
+* visualiser la loi de distance génomique
+
+```sh
+ps_from_hic <- distanceLaw(hic, by_chr = TRUE)
+plotPs(ps_from_hic, aes(x = binned_distance, y = norm_p))
+plotPsSlope(ps_from_hic, aes(x = binned_distance, y = slope))
+```
+
+* 
+
+* visualiser des interactions spécifiques (4C plot)
+
+```sh
+v4C <- virtual4C(full_hic, viewpoint = GRanges("II:230001-240000"))
+```
 
 ## analyse de vos matrice d'interaction
 
-maintenant que c'est fait , on peut regarder ou en est notre pipeline hicstuff et explorer les fichiers de sorties.
-
+maintenant que c'est fait , vous pouvez regarder où en est votre pipeline hicstuff et explorer les fichiers de sorties.
 
 
 ```sh
@@ -137,3 +212,9 @@ je vous laisse explorer tout ca et répondre aux questions suivantes:
 * Q: Quel est le taux de duplicats de PCR ?
 * Q: Quels est le taux de reads conservées après le filtre de vos données ?
 * Q: combien votre matrice contient de contacts ?
+
+
+
+et maintenant faites moi une petite comparaison de vos matrices !!
+
+
