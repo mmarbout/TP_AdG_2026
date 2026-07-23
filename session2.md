@@ -86,8 +86,8 @@ library(GenomicRanges)
 linrary(ggplot2)
 
 
-coolf <-("cool_files/exemple1.mcool")
-cf <- CoolFile(coolf)
+coolf1 <-("cool_files/exemple1.mcool")
+cf1 <- CoolFile(coolf1)
 ```
 
 Plusieurs « emplacements » (c'est-à-dire des éléments d'information) sont associés à un objet `ContactFile` :
@@ -102,8 +102,8 @@ cf
 resolution(cf)
 pairsFile(cf)
 metadata(cf)
-availableResolutions(cf)
-availableChromosomes(cf)
+availableResolutions(cf1)
+availableChromosomes(cf1)
 ```
 
 NB: Les objets ContactFile ne sont que des connexions à un fichier HiC stocké sur disque. Bien que des métadonnées soient disponibles, ils ne contiennent pas les données elles-mêmes !
@@ -112,34 +112,34 @@ NB: Les objets ContactFile ne sont que des connexions à un fichier HiC stocké 
 on peut ensuite créer un object HiCExperiment a partir de cette connexion:
 
 ```sh
-hic <- import(cf, resolution=5000)
+hic1 <- import(cf1, resolution=5000)
 ```
 
 ```sh
-interactions(hic)
+interactions(hic1)
 ```
 
 il est ensuite possible de mettre ces données sous forme de data frame.
 
 ```sh
-data <- as.data.frame(hic)
+data <- as.data.frame(hic1)
 ```
 
 on peut également importer les données uniquement pour une région donnée:
 
 ```sh
-hic_zoom <- import(cf, resolution=1000, focus="NC_000913.3:1-500000")
-interactions(hic_zoom)
+hic1_zoom <- import(cf1, resolution=1000, focus="NZ_CP009712.1")
+interactions(hic1_zoom)
 ```
 
 il existe ensuite une fonction pour visualiser directement la matrice:
 
 ```sh
-plotMatrix(hic)
+plotMatrix(hic1)
 ```
 
 ```sh
-plotMatrix(hic_zoom)
+plotMatrix(hic1_zoom)
 ```
 
 et oui c'est aussi simple que cela !!! 
@@ -151,13 +151,13 @@ on peut réaliser différentes opérations sur ces données:
 * visualiser la couverture du génome
 
 ```sh
-gi  <- interactions(hic)
+gi  <- interactions(hic1)
 id1 <- anchors(gi, type = "first",  id = TRUE)
 id2 <- anchors(gi, type = "second", id = TRUE)
 is_diag <- (id1 == id2) 
 bins_diag <- anchors(gi[is_diag], type = "first")
 bins_diag$count <- scores(hic, "count")[is_diag]
-all_bins <- regions(hic)
+all_bins <- regions(hic1)
 all_bins$count <- 0L
 hits <- findOverlaps(bins_diag, all_bins, type = "equal")
 all_bins$count[subjectHits(hits)] <- bins_diag$count[queryHits(hits)]
@@ -183,18 +183,49 @@ ggplot(df, aes(x = pos / 1e6, y = count)) +
 * visualiser la loi de distance génomique
 
 ```sh
-ps_from_hic <- distanceLaw(hic, by_chr = TRUE)
+ps_from_hic <- distanceLaw(hic1, by_chr = TRUE)
 plotPs(ps_from_hic, aes(x = binned_distance, y = norm_p))
 plotPsSlope(ps_from_hic, aes(x = binned_distance, y = slope))
 ```
 
-* 
-
-* visualiser des interactions spécifiques (4C plot)
+* visualiser les interactions d'une zome du génome (4C plot)
 
 ```sh
-v4C <- virtual4C(full_hic, viewpoint = GRanges("II:230001-240000"))
+v4C <- virtual4C(hic1, viewpoint = GRanges("NZ_CP009712.1:1-10000"))
+v4C
 ```
+
+```sh
+df <- as_tibble(v4C)
+ggplot(df, aes(x = center, y = score)) + 
+    geom_area(position = "identity", alpha = 0.5) + 
+    theme_bw() + 
+    labs(x = "Position", y = "Contacts with viewpoint") +
+    scale_x_continuous(labels = scales::unit_format(unit = "M", scale = 1e-06)) + 
+    facet_wrap(~seqnames, scales = 'free_y')
+```
+
+* comparer deux matrices (a condition bien sur qu'elles aient été faites a partir du même génome)
+
+```sh
+coolf2 <-("cool_files/exemple2.mcool")
+cf2 <- CoolFile(coolf2)
+hic2 <- import(cf2, resolution=5000)
+```
+
+```sh
+div_contacts <- divide(hic2, by = hic1)
+plotMatrix(div_contacts,
+		use.scores = 'balanced.fc', 
+        scale = 'log2', 
+        limits = c(-1, 1),
+        cmap = bwrColors()
+    )
+```
+
+
+* refaites la même chose avec l'exemple 3 (cool_files/exemple3.mcool)
+
 
 ## analyse de vos matrice d'interaction
 
