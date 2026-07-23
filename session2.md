@@ -59,9 +59,10 @@ commencer par copier les fichiers suivant sur gaia
 
 ```sh
 mkdir -p cool_files/
-scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/cool_files/exemple1.mcool cool_files/
-scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/cool_files/exemple2.mcool cool_files/
+scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/cool_files/exemple*.mcool cool_files/
 ```
+
+
 lancer R studio et mettez vous dans le répertoire adéquat (TP_HiC) puis installez les packages suivant:
 
 ```sh
@@ -246,6 +247,6 @@ je vous laisse explorer tout ca et répondre aux questions suivantes:
 
 
 
-et maintenant faites moi une petite comparaison de vos matrices !!
+et maintenant faites moi une petite comparaison de vos matrices (vous pouvez également comparer entre vous !!!!!)
 
 
