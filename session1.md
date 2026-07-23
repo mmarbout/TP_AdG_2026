@@ -54,10 +54,13 @@ scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAI
 
 il nous reste une dernière chose à faire ... installer le pipeline hicstuff qui permet de traiter les données de HiC et construire les fichiers de matrice !!!
 
+lien vers le github du programme:
+
 [hicstuff](https://github.com/koszullab/hicstuff)
 
-mais avant il va falloir installer quelques programmes. Pour cela nous allons utilisons micromamba qui est un système de gestion de paquets et d'environnement open-source qui fonctionne sous Windows, macOS et Linux. Micromamba installe, exécute et met à jour rapidement les paquets et leurs dépendances. Micromamba crée, enregistre, charge et bascule facilement entre les environnements sur votre ordinateur local.
+Pour cela nous allons utilisons micromamba qui est un système de gestion de paquets et d'environnement open-source qui fonctionne sous Windows, macOS et Linux. Micromamba installe, exécute et met à jour rapidement les paquets et leurs dépendances. Micromamba crée, enregistre, charge et bascule facilement entre les environnements sur votre ordinateur local.
 
+lien vers le github du programme:
 
 [micromamba](https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html)
 
