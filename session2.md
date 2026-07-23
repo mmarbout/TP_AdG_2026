@@ -49,3 +49,68 @@ cela risque de prendre un peu de temps ... donc pendant ce temps la nous allons 
 
 ouvrez R studio puis installez les packages suivant:
 
+```sh
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install(version = "3.18")
+```
+
+```sh
+BiocManager::install("HiCExperiment", ask = FALSE)
+BiocManager::install("HiCool", ask = FALSE)
+BiocManager::install("HiContacts", ask = FALSE)
+BiocManager::install("GenomicRanges", ask = FALSE)
+```
+
+maintenant que c'est fait , on peut regarder ou en est notre pipeline hicstuff et explorer les fichiers de sorties.
+
+```sh
+ls HiC/binome_1_1/
+```
+
+je vous laisse explorer tout ca et répondre aux questions suivantes:
+
+* Q: Combien de reads aviez vous dans votre librairies ?
+* Q: Quel est le taux de mapping de vos données sur le génome de référence ?
+* Q: Quel est le taux de duplicats de PCR ?
+* Q: Quels est le taux de reads conservées après le filtre de vos données ?
+* Q: combien votre matrice contient de contacts ?
+
+
+## analyse d'une matrice d'interaction
+
+lancer R studio et mettez vous dans le répertoire adéquat (TP_HiC).
+
+```sh
+library(HiCExperiment)
+library(HiContacts)
+coolf <-("HiC/Binome_1_1/Binome_1_1.mcool)
+cf <- CoolFile(coolf)
+```
+
+Plusieurs « emplacements » (c'est-à-dire des éléments d'information) sont associés à un objet `ContactFile` :
+
+* Le chemin d'accès à la matrice de contacts stockée sur disque
+* La résolution active (par défaut, la résolution la plus fine disponible dans une matrice de contacts multi-résolution)
+* Optionnellement, le chemin d'accès à un fichier de paires correspondantes
+* Certaines métadonnées.
+
+
+```sh
+cf
+resolution(cf)
+pairsFile(cf)
+metadata(cf)
+availableResolutions(cf)
+availableChromosomes(cf)
+interactions(hic)
+```
+
+
+```sh
+plotMatrix(hic)
+```
+
+et oui c'est aussi simple que cela !!! 
+mais il existe pleins d'arguments à la fonction plotMatrix qui permettent de modifier l'image (voir l'aide)
+
