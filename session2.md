@@ -225,7 +225,7 @@ plotMatrix(div_contacts,
 ```
 
 
-* refaites la même chose avec l'exemple 3 (cool_files/exemple3.mcool)
+* refaites la même chose avec l'exemple 3 et 4 (cool_files/exemple3.mcool & cool_files/exemple4.mcool)
 
 
 ## analyse de vos matrice d'interaction
