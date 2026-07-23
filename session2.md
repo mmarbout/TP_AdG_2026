@@ -250,3 +250,4 @@ je vous laisse explorer tout ca et répondre aux questions suivantes:
 et maintenant faites moi une petite comparaison de vos matrices (vous pouvez également comparer entre vous !!!!!)
 
 
+
