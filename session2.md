@@ -47,7 +47,7 @@ maintenant que c'est fait , vous pouvez regarder où en est votre pipeline hicst
 ls HiC/binome1_1/
 ```
 
-je vous laisse explorer tout ca et répondre aux questions suivantes:
+je vous laisse explorer tout ca, lancer le pipeline sur votre deuxième librairie et répondre aux questions suivantes:
 
 * Q: Combien de reads aviez vous dans votre librairies ?
 * Q: Quel est le taux de mapping de vos données sur le génome de référence ?
