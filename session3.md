@@ -173,7 +173,17 @@ plotMatrix(div_contacts,
 
 ## Travail perso
 
-voici le tableau de vos banques avec les phénotypes, souches, conditions ... faites moi une petite analyse de vos résultats !! 
+voici le tableau de vos banques avec les phénotypes, souches, conditions ... 
+vos banques sont la:
+sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/fastq/
+
+et elles sont nommées selon le schéma suivant: 
+* Binome_X_1_R1.fq.gz
+* Binome_X_1_R2.fq.gz
+* Binome_X_2_R1.fq.gz
+* Binome_X_2_R2.fq.gz
+
+faites moi une petite analyse de vos résultats !! 
 
 ![tableau_binome](docs/images/tableau2.png)
 
