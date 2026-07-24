@@ -175,7 +175,7 @@ plotMatrix(div_contacts,
 
 voici le tableau de vos banques avec les phénotypes, souches, conditions ... faites moi une petite analyse de vos résultats !! 
 
-[tableau_binome](docs/images/tableau.png)
+![tableau_binome](docs/images/tableau.png)
 
 
 
