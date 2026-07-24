@@ -29,20 +29,7 @@ les arguments à donner obligatoirement sont le génome (ou l'index), les fichie
 voici la commande à lancer (c'est un exemple pour le jeu de donnée Binome_1_1):
 
 ```sh
-hicstuff pipeline --genome ref/PAO.fa \
-				--binning 1000 \
-				--distance_law \
-				--duplicates \
-				--enzyme DpnII,HinfI \
-				--filter \
-				--outdir HiC/binome_1_1/ \
-				--plot \
-				--prefix binome_1_1 \
-				--threads 4 \
-				--zoomify \
-				--skip-count \
-				fastq/Binome_1_1_R1.fq.gz \
-				fastq/Binome_1_1_R2.fq.gz
+hicstuff pipeline --genome ref/PAO.fa --binning 1000 --distance_law --duplicates --enzyme DpnII,HinfI --filter --outdir HiC/binome_1_1/ --plot --prefix binome_1_1 --threads 4 --zoomify --skip-count fastq/Binome_1_1_R1.fq.gz fastq/Binome_1_1_R2.fq.gz
 ```
 
 cela risque de prendre un peu de temps ... 
