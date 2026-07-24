@@ -2,7 +2,7 @@
 
 ## analyse d'une matrice d'interaction
 
-donc pendant ce temps la nous allons installer les packages R nécessaire à l'analyse de nos données et faire quelques exercices sur des données tests.
+Pour commencer, nous allons installer les packages R nécessaire à l'analyse de nos données et faire quelques exercices sur des données tests.
 
 
 PS: si vous le souhaitez, voici un lien vers un tutorial du package HiCExperiment :
