@@ -84,7 +84,7 @@ data <- as.data.frame(hic1)
 on peut également importer les données uniquement pour une région donnée:
 
 ```sh
-hic1_zoom <- import(cf1, resolution=1000, focus="NZ_CP009712.1")
+hic1_zoom <- import(cf1, resolution=1000, focus="PAO1:1-50000")
 interactions(hic1_zoom)
 ```
 
@@ -147,7 +147,7 @@ plotPsSlope(ps_from_hic, aes(x = binned_distance, y = slope))
 * visualiser les interactions d'une zome du génome avc le reste (4C plot)
 
 ```sh
-v4C <- virtual4C(hic1, viewpoint = GRanges("NZ_CP009712.1:1-10000"))
+v4C <- virtual4C(hic1, viewpoint = GRanges("PAO11:1-10000"))
 v4C
 ```
 
