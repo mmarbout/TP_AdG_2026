@@ -118,13 +118,13 @@ all_bins$count <- 0L
 hits <- findOverlaps(bins_diag, all_bins, type = "equal")
 all_bins$count[subjectHits(hits)] <- bins_diag$count[queryHits(hits)]
 
-df <- data.frame(
+df_cov <- data.frame(
   pos   = (start(all_bins) + end(all_bins)) / 2,
   count = all_bins$count,
   chr   = as.character(seqnames(all_bins))
 )
 
-ggplot(df, aes(x = pos / 1e6, y = count)) +
+ggplot(df_cov, aes(x = pos / 1e6, y = count)) +
   geom_area(fill = "steelblue", alpha = 0.4) +
   geom_line(colour = "steelblue", linewidth = 0.3) +
   facet_wrap(~ chr, scales = "free_x", ncol = 1) +
@@ -152,8 +152,8 @@ v4C
 ```
 
 ```sh
-df <- as_tibble(v4C)
-ggplot(df, aes(x = center, y = score)) + 
+df_4C <- as_tibble(v4C)
+ggplot(df_4C, aes(x = center, y = score)) + 
     geom_area(position = "identity", alpha = 0.5) + 
     theme_bw() + 
     labs(x = "Position", y = "Contacts with viewpoint") +
