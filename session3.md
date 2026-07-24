@@ -112,7 +112,7 @@ id1 <- anchors(gi, type = "first",  id = TRUE)
 id2 <- anchors(gi, type = "second", id = TRUE)
 is_diag <- (id1 == id2) 
 bins_diag <- anchors(gi[is_diag], type = "first")
-bins_diag$count <- scores(hic, "count")[is_diag]
+bins_diag$count <- scores(hic1, "count")[is_diag]
 all_bins <- regions(hic1)
 all_bins$count <- 0L
 hits <- findOverlaps(bins_diag, all_bins, type = "equal")
