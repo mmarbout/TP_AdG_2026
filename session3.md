@@ -29,6 +29,7 @@ BiocManager::install("HiCExperiment", ask = FALSE)
 BiocManager::install("HiCool", ask = FALSE)
 BiocManager::install("HiContacts", ask = FALSE)
 BiocManager::install("GenomicRanges", ask = FALSE)
+BiocManager::install("dplyr", ask = FALSE)
 ```
 
 on peut ensuite commencer à travailler sur nos fichiers cool.
@@ -37,7 +38,8 @@ on peut ensuite commencer à travailler sur nos fichiers cool.
 library(HiCExperiment)
 library(HiContacts)
 library(GenomicRanges)
-linrary(ggplot2)
+library(ggplot2)
+library(dplyr)
 
 
 coolf1 <-("cool_files/binome1_1.mcool")
