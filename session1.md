@@ -26,7 +26,6 @@ créer un répertoire pour y déposer les fichiers fastq et les fichiers log des
 
 ```sh
 mkdir -p fastq/
-mkdir -p log_files/
 ```
 
 Vous allez travailler avec les fichiers de sorties de séquençage correspondants aux deux banques construites par votre binome: les reads en sens (forward) et en anti-sens (reverse) pour chaque banque construites. Vos fichiers sont nommés ainsi et se trouve sur l'espace GAIA:
@@ -98,7 +97,7 @@ on peut vérifier facilement que tout est ok en appelant la doc de hicstuff.
 hicstuff --help
 ```
 
-pour désactiver l'environnement, il suffit de taper la commande suivant 
+pour désactiver l'environnement, il suffit de taper la commande suivante
 
 ```sh
 micromamba deactivate
