@@ -28,28 +28,21 @@ créer un répertoire pour y déposer les fichiers fastq et les fichiers log des
 mkdir -p fastq/
 ```
 
-Vous allez travailler avec les fichiers de sorties de séquençage correspondants aux deux banques construites par votre binome: les reads en sens (forward) et en anti-sens (reverse) pour chaque banque construites. Vos fichiers sont nommés ainsi et se trouve sur l'espace GAIA:
-
-* BinomeX_1_R1.fq.gz
-* BinomeX_1_R2.fq.gz
-* BinomeX_2_R1.fq.gz
-* BinomeX_2_R2.fq.gz
-
-
-récupérer les données correspondants à vos librairies en copiant les fichiers fastq (n'oubliez pas de changer le X !!!)
+Pour le moment, nous allons travailler avec un jeu de données du labo.
+Récupérer les données correspondants en copiant les fichiers fastq.
 
 ```sh
-scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/fastq/BinomeX_* fastq/
+scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/fastq/exemple* fastq/
 ```
 
 il faut également récupérer le fichier FastA correspondant à notre génome de référence.
 
 ```sh
 mkdir -p ref/
-scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/ref/PAO.fa ref/
+scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/ref/*.fa ref/
 ```
 
-enfin nous aurons également besoin de fichiers fastq correspondant à du RNAseq
+enfin nous aurons également besoin de fichiers fastq correspondant à du RNAseq (cc'est pour plus tard).
 
 ```sh
 scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/fastq/RNAseq_R1.fq.gz fastq/
