@@ -4,16 +4,8 @@
 
 Pour commencer, nous allons installer les packages R nécessaire à l'analyse de nos données et faire quelques exercices sur des données tests.
 
-
 PS: si vous le souhaitez, voici un lien vers un tutorial du package HiCExperiment :
 [Tuto HiCExperiment](https://jserizay.com/OHCA/docs/devel/pages/data-representation.html)
-
-commencer par copier les fichiers suivant sur gaia
-
-```sh
-mkdir -p cool_files/
-scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/cool_files/exemple*.mcool cool_files/
-```
 
 
 lancer R studio et mettez vous dans le répertoire adéquat (TP_HiC) puis installez les packages suivant:
@@ -42,7 +34,7 @@ library(ggplot2)
 library(dplyr)
 
 
-coolf1 <-("cool_files/binome1_1.mcool")
+coolf1 <-("cool_files/exemple.mcool")
 cf1 <- CoolFile(coolf1)
 ```
 
@@ -84,7 +76,7 @@ data <- as.data.frame(hic1)
 on peut également importer les données uniquement pour une région donnée:
 
 ```sh
-hic1_zoom <- import(cf1, resolution=1000, focus="PAO1:1-50000")
+hic1_zoom <- import(cf1, resolution=1000, focus="E_coli:1-50000")
 interactions(hic1_zoom)
 ```
 
@@ -147,7 +139,7 @@ plotPsSlope(ps_from_hic, aes(x = binned_distance, y = slope))
 * visualiser les interactions d'une zone du génome avc le reste (4C plot)
 
 ```sh
-v4C <- virtual4C(hic1, viewpoint = GRanges("PAO11:1-10000"))
+v4C <- virtual4C(hic1, viewpoint = GRanges("E_coli:1-10000"))
 v4C
 ```
 
@@ -164,7 +156,7 @@ ggplot(df_4C, aes(x = center, y = score)) +
 * comparer deux matrices (a condition bien sur qu'elles aient été faites a partir du même génome)
 
 ```sh
-coolf2 <-("cool_files/binome1_2.mcool")
+coolf2 <-("cool_files/XX.mcool")
 cf2 <- CoolFile(coolf2)
 hic2 <- import(cf2, resolution=5000)
 ```
