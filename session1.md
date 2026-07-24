@@ -31,16 +31,16 @@ mkdir -p log_files/
 
 Vous allez travailler avec les fichiers de sorties de séquençage correspondants aux deux banques construites par votre binome: les reads en sens (forward) et en anti-sens (reverse) pour chaque banque construites. Vos fichiers sont nommés ainsi et se trouve sur l'espace GAIA:
 
-* Binome_X_1_R1.fq.gz
-* Binome_X_1_R2.fq.gz
-* Binome_X_2_R1.fq.gz
-* Binome_X_2_R2.fq.gz
+* BinomeX_1_R1.fq.gz
+* BinomeX_1_R2.fq.gz
+* BinomeX_2_R1.fq.gz
+* BinomeX_2_R2.fq.gz
 
 
 récupérer les données correspondants à vos librairies en copiant les fichiers fastq (n'oubliez pas de changer le X !!!)
 
 ```sh
-scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/fastq/Binome_X_* fastq/
+scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/fastq/BinomeX_* fastq/
 ```
 
 il faut également récupérer le fichier FastA correspondant à notre génome de référence.
@@ -50,13 +50,20 @@ mkdir -p ref/
 scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/ref/PAO.fa ref/
 ```
 
+enfin nous aurons également besoin de fichiers fastq correspondant à du RNAseq
+
+```sh
+scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/fastq/RNAseq_R1.fq.gz fastq/
+```
 
 
-il nous reste une dernière chose à faire ... installer le pipeline hicstuff qui permet de traiter les données de HiC et construire les fichiers de matrice !!!
+il nous reste une dernière chose à faire ... installer le pipeline hicstuff et le pipeline tinymapper qui permettent de traiter, respectivement, les données de HiC et de RNAseq.
 
-lien vers le github du programme:
+lien vers le github des programmes:
 
 [hicstuff](https://github.com/koszullab/hicstuff)
+
+[tinymapper](https://github.com/js2264/tinyMapper)
 
 Pour cela nous allons utilisons micromamba qui est un système de gestion de paquets et d'environnement open-source qui fonctionne sous Windows, macOS et Linux. Micromamba installe, exécute et met à jour rapidement les paquets et leurs dépendances. Micromamba crée, enregistre, charge et bascule facilement entre les environnements sur votre ordinateur local.
 
@@ -100,7 +107,7 @@ micromamba deactivate
 gardez bien en tête qu'il faudra activer l'environnement à chaque fois que l'on veut utiliser hicstuff.
 
 
-si tout est ok, alors on est prêt à commencer !!!
+si tout est ok, alors vous pouvez faire la même chose pour tinymapper.
 
 
 
