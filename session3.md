@@ -183,6 +183,8 @@ et elles sont nommées selon le schéma suivant:
 * Binome_X_2_R1.fq.gz
 * Binome_X_2_R2.fq.gz
 
+vous avez déjà récupéré le génome de référence (ref/PAO.fa).
+
 faites moi une petite analyse de vos résultats !! 
 
 ![tableau_binome](docs/images/tableau2.png)
