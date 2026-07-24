@@ -35,7 +35,7 @@ les arguments à donner obligatoirement sont le génome (ou l'index), les fichie
 voici la commande à lancer (c'est un exemple pour le jeu de donnée Binome_1_1):
 
 ```sh
-hicstuff pipeline --genome ref/PAO.fa --binning 1000 --distance-law --duplicates --enzyme DpnII,HinfI --filter --outdir hic/binome1_1/ --plot --prefix binome1_1 --threads 4 --skip-count fastq/Binome1_1_R1.fq.gz fastq/Binome1_1_R2.fq.gz
+hicstuff pipeline --genome ref/Ecoli.fa --binning 1000 --distance-law --duplicates --enzyme DpnII,HinfI --filter --outdir hic/exemple/ --plot --prefix exemple --threads 4 --skip-count fastq/exemple_R1.fq.gz fastq/exemple_R2.fq.gz
 ```
 
 cela ne devrait pas prendre plus de 10 minutes ...  
@@ -44,7 +44,7 @@ maintenant que c'est fait , vous pouvez regarder où en est votre pipeline hicst
 
 
 ```sh
-ls HiC/binome1_1/
+ls HiC/exemple/
 ```
 
 je vous laisse explorer tout ca, lancer le pipeline sur votre deuxième librairie et répondre aux questions suivantes:
