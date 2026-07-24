@@ -37,7 +37,7 @@ hicstuff pipeline --genome ref/PAO.fa \
 				--filter \
 				--outdir HiC/binome_1_1/ \
 				--plot \
-				--prefix binome_X_1 \
+				--prefix binome_1_1 \
 				--threads 4 \
 				--zoomify \
 				--skip-count \
