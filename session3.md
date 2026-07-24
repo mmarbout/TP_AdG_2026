@@ -40,7 +40,7 @@ library(GenomicRanges)
 linrary(ggplot2)
 
 
-coolf1 <-("cool_files/exemple1.mcool")
+coolf1 <-("cool_files/binome1_1.mcool")
 cf1 <- CoolFile(coolf1)
 ```
 
@@ -52,10 +52,10 @@ Plusieurs « emplacements » (c'est-à-dire des éléments d'information) sont a
 * Certaines métadonnées.
 
 ```sh
-cf
-resolution(cf)
-pairsFile(cf)
-metadata(cf)
+cf1
+resolution(cf1)
+pairsFile(cf1)
+metadata(cf1)
 availableResolutions(cf1)
 availableChromosomes(cf1)
 ```
@@ -100,7 +100,7 @@ et oui c'est aussi simple que cela !!!
 mais il existe pleins d'arguments à la fonction plotMatrix qui permettent de modifier l'image (voir l'aide).
 
 
-on peut réaliser différentes opérations sur ces données:
+on peut réaliser différentes opérations sur ces données de HiC:
 
 * visualiser la couverture du génome
 
@@ -142,7 +142,7 @@ plotPs(ps_from_hic, aes(x = binned_distance, y = norm_p))
 plotPsSlope(ps_from_hic, aes(x = binned_distance, y = slope))
 ```
 
-* visualiser les interactions d'une zome du génome (4C plot)
+* visualiser les interactions d'une zome du génome avc le reste (4C plot)
 
 ```sh
 v4C <- virtual4C(hic1, viewpoint = GRanges("NZ_CP009712.1:1-10000"))
@@ -162,7 +162,7 @@ ggplot(df, aes(x = center, y = score)) +
 * comparer deux matrices (a condition bien sur qu'elles aient été faites a partir du même génome)
 
 ```sh
-coolf2 <-("cool_files/exemple2.mcool")
+coolf2 <-("cool_files/binome1_2.mcool")
 cf2 <- CoolFile(coolf2)
 hic2 <- import(cf2, resolution=5000)
 ```
@@ -177,8 +177,3 @@ plotMatrix(div_contacts,
     )
 ```
 
-
-* refaites la même chose avec l'exemple 3 et 4 (cool_files/exemple3.mcool & cool_files/exemple4.mcool)
-
-
-## analyse de vos matrice d'interaction
