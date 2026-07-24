@@ -144,7 +144,7 @@ plotPs(ps_from_hic, aes(x = binned_distance, y = norm_p))
 plotPsSlope(ps_from_hic, aes(x = binned_distance, y = slope))
 ```
 
-* visualiser les interactions d'une zome du génome avc le reste (4C plot)
+* visualiser les interactions d'une zone du génome avc le reste (4C plot)
 
 ```sh
 v4C <- virtual4C(hic1, viewpoint = GRanges("PAO11:1-10000"))
@@ -178,4 +178,12 @@ plotMatrix(div_contacts,
         cmap = bwrColors()
     )
 ```
+
+## Travail perso
+
+voici le tableau de vos banques avec les phénotypes, souches, conditions ... faites moi une petite analyse de vos résultats !! 
+
+[tableau_binome](docs/images/tableau.png)
+
+
 
