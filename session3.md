@@ -107,7 +107,7 @@ on peut réaliser différentes opérations sur ces données de HiC:
 * visualiser la couverture du génome
 
 ```sh
-gi  <- interactions(hic11)
+gi  <- interactions(hic1)
 id1 <- anchors(gi, type = "first",  id = TRUE)
 id2 <- anchors(gi, type = "second", id = TRUE)
 is_diag <- (id1 == id2) 
