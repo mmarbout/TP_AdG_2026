@@ -45,7 +45,7 @@ scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAI
 enfin nous aurons également besoin de fichiers fastq correspondant à du RNAseq (cc'est pour plus tard).
 
 ```sh
-scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/fastq/RNAseq_R1.fq.gz fastq/
+scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/fastq/RNA* fastq/
 ```
 
 
