@@ -181,8 +181,7 @@ vous pouvez les lancer directement depuis un terminal.
 Ils prennent des arguments en entrée comme dans l'exemple ci dessous: 
 
 ```sh
-coolf2 <-("cool_files/XX.mcool")
-cf2 <- CoolFile(coolf2)
-hic2 <- import(cf2, resolution=5000)
+scripts/./plot_matrix.r cool_files/exemple.mcool 5000 exemple_5kb.pdf
 ```
 
+vous aurez tout le temps d'explorer ces différents scripts pour comprednre les arguments nécessaires ... vous avez aussi le droit de les modifier à facon si vous le souhaitez !!!
