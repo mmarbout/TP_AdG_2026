@@ -184,4 +184,11 @@ Ils prennent des arguments en entrée comme dans l'exemple ci dessous:
 scripts/./plot_matrix.r cool_files/exemple.mcool 5000 exemple_5kb.pdf
 ```
 
-vous aurez tout le temps d'explorer ces différents scripts pour comprednre les arguments nécessaires ... vous avez aussi le droit de les modifier à facon si vous le souhaitez !!!
+voila une liste de scripts basé sur les données ainsi qu'un résumé de ce qu'ils font:
+
+* plot_matrice.R : plot l'ensemble d'un fichier mcool.
+* plot_matrice_zoom.R : plot une région spécifique d'un fichier mcool.
+* plot_coverage : plot la couverture HiC (brut - raw) à courte distance le long du chromosome.
+* HiC_comparison.R : plot une matrice de comparaison (log ratio) de deux fichiers mcool
+* directionnal_index.R : plot le directionnal index d'une matrice d'interaction (exporte également les données brutes de l'analyse).
+* plot_HiC_shortscale.R : plot le signal HiC à courte distance d'une matrice d'interaction (signal normalisé) (exporte également les données brutes de l'analyse).
