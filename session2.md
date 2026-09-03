@@ -1,6 +1,6 @@
 # Session 2
 
-## génération du fichier matrice
+## génération d'un fichier matrice
 
 le pipeline hicstuff permet de générer, à partir d'un génome (fasta) et de données de séuqnçage (HiC), un fihcier mcool (multicool) qui est le format standard des données HiC. 
 [cooler package](https://github.com/open2c/cooler)
