@@ -2,7 +2,7 @@
 
 ## analyse d'une matrice d'interaction
 
-Pour commencer, nous allons installer les packages R nécessaire à l'analyse de nos données et faire quelques exercices sur des données tests.
+Pour commencer, nous allons installer les packages R nécessaire à l'analyse des données et faire quelques exercices sur les données tests.
 
 PS: si vous le souhaitez, voici un lien vers un tutorial du package HiCExperiment :
 [Tuto HiCExperiment](https://jserizay.com/OHCA/docs/devel/pages/data-representation.html)
@@ -24,7 +24,7 @@ BiocManager::install("GenomicRanges", ask = FALSE)
 BiocManager::install("dplyr", ask = FALSE)
 ```
 
-on peut ensuite commencer à travailler sur nos fichiers cool.
+on peut ensuite commencer à travailler sur nos fichiers matrices (i.e.: les fichiers cool).
 
 ```sh
 library(HiCExperiment)
@@ -94,7 +94,7 @@ et oui c'est aussi simple que cela !!!
 mais il existe pleins d'arguments à la fonction plotMatrix qui permettent de modifier l'image (voir l'aide).
 
 
-on peut réaliser différentes opérations sur ces données de HiC:
+on peut également réaliser différentes opérations sur ces données de HiC:
 
 * visualiser la couverture du génome
 
@@ -153,7 +153,7 @@ ggplot(df_4C, aes(x = center, y = score)) +
     facet_wrap(~seqnames, scales = 'free_y')
 ```
 
-* comparer deux matrices (a condition bien sur qu'elles aient été faites a partir du même génome)
+* comparer deux matrices (à condition bien sur qu'elles aient été faites a partir du même génome)
 
 ```sh
 coolf2 <-("cool_files/XX.mcool")
@@ -171,23 +171,18 @@ plotMatrix(div_contacts,
     )
 ```
 
-## Travail perso
 
-voici le tableau de vos banques avec les phénotypes, souches, conditions ... 
-vos banques sont la:
-sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/fastq/
+## analyse d'une matrice d'interaction à partir de script R
 
-et elles sont nommées selon le schéma suivant (X = numéro de votre binome): 
-* Binome_X_1_R1.fq.gz
-* Binome_X_1_R2.fq.gz
-* Binome_X_2_R1.fq.gz
-* Binome_X_2_R2.fq.gz
+Je vous ai préparé différents scripts R permettant de réaliser directement certaines opérations sur vos données.
 
-vous avez déjà récupéré le génome de référence (ref/PAO.fa).
+Ces scripts se trouvent dans le dossier [/scripts]
+vous pouvez les lancer directement depuis un terminal.
+Ils prennent des arguments en entrée comme dans l'exemple ci dessous: 
 
-faites moi une petite analyse / interprétations de vos résultats !! 
-
-![tableau_binome](docs/images/tableau2.png)
-
-
+```sh
+coolf2 <-("cool_files/XX.mcool")
+cf2 <- CoolFile(coolf2)
+hic2 <- import(cf2, resolution=5000)
+```
 
