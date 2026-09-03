@@ -96,37 +96,6 @@ mais il existe pleins d'arguments à la fonction plotMatrix qui permettent de mo
 
 on peut également réaliser différentes opérations sur ces données de HiC:
 
-* visualiser la couverture du génome
-
-```sh
-gi  <- interactions(hic1)
-id1 <- anchors(gi, type = "first",  id = TRUE)
-id2 <- anchors(gi, type = "second", id = TRUE)
-is_diag <- (id1 == id2) 
-bins_diag <- anchors(gi[is_diag], type = "first")
-bins_diag$count <- scores(hic1, "count")[is_diag]
-all_bins <- regions(hic1)
-all_bins$count <- 0L
-hits <- findOverlaps(bins_diag, all_bins, type = "equal")
-all_bins$count[subjectHits(hits)] <- bins_diag$count[queryHits(hits)]
-
-df_cov <- data.frame(
-  pos   = (start(all_bins) + end(all_bins)) / 2,
-  count = all_bins$count,
-  chr   = as.character(seqnames(all_bins))
-)
-
-ggplot(df_cov, aes(x = pos / 1e6, y = count)) +
-  geom_area(fill = "steelblue", alpha = 0.4) +
-  geom_line(colour = "steelblue", linewidth = 0.3) +
-  facet_wrap(~ chr, scales = "free_x", ncol = 1) +
-  labs(
-    x     = "Position (Mb)",
-    y     = "Interactions intra-bin (count)",
-    title = "Couverture Hi-C — diagonale (self-interactions)"
-  ) +
-  theme_minimal()
-```
 
 * visualiser la loi de distance génomique
 
