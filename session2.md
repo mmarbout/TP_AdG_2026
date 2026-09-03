@@ -52,6 +52,7 @@ je vous laisse explorer tout ca, lancer le pipeline sur votre deuxième librairi
 * Q: Combien de reads aviez vous dans votre librairies ?
 * Q: Quel est le taux de mapping de vos données sur le génome de référence ?
 * Q: Quel est le taux de duplicats de PCR ?
+* Q: Quels filtres le pipeline a appliqué sur vos données ?
 * Q: Quels est le taux de reads conservées après le filtre de vos données ?
 * Q: combien votre matrice contient de contacts ?
 
