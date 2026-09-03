@@ -161,3 +161,8 @@ voila une liste de scripts basé sur les données ainsi qu'un résumé de ce qu'
 * HiC_comparison.R : plot une matrice de comparaison (log ratio) de deux fichiers mcool
 * directionnal_index.R : plot le directionnal index d'une matrice d'interaction (exporte également les données brutes de l'analyse).
 * plot_HiC_shortscale.R : plot le signal HiC à courte distance d'une matrice d'interaction (signal normalisé) (exporte également les données brutes de l'analyse).
+
+
+vous pouvez explorer ces scripts et les utiliser sur le jeu de données d'Escherichia coli
+
+
