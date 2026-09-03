@@ -32,7 +32,7 @@ les arguments à donner obligatoirement sont le génome (ou l'index), les fichie
 
 ![hicstuff_pipeline](docs/images/hicstuff_pipeline.png)
 
-voici la commande à lancer (c'est un exemple pour le jeu de donnée Binome_1_1):
+voici la commande à lancer (c'est un exemple à partir d'un jeu de données de Escherichia coli):
 
 ```sh
 hicstuff pipeline --genome ref/Ecoli.fa --binning 1000 --distance-law --duplicates --enzyme DpnII,HinfI --filter --outdir hic/exemple/ --plot --prefix exemple --threads 4 --skip-count fastq/exemple_R1.fq.gz fastq/exemple_R2.fq.gz
@@ -47,12 +47,12 @@ maintenant que c'est fait , vous pouvez regarder où en est votre pipeline hicst
 ls HiC/exemple/
 ```
 
-je vous laisse explorer tout ca, lancer le pipeline sur votre deuxième librairie et répondre aux questions suivantes:
+je vous laisse explorer tout ca et répondre aux questions suivantes:
 
-* Q: Combien de reads aviez vous dans votre librairies ?
-* Q: Quel est le taux de mapping de vos données sur le génome de référence ?
+* Q: Combien de reads initial avions nous dans ce jeu de données ?
+* Q: Quel est le taux de mapping de ces données sur le génome de référence ?
 * Q: Quel est le taux de duplicats de PCR ?
-* Q: Quels filtres le pipeline a appliqué sur vos données ?
+* Q: Quels filtres le pipeline a appliqué sur les données ?
 * Q: Quels est le taux de reads conservées après le filtre de vos données ?
 * Q: combien votre matrice contient de contacts ?
 
