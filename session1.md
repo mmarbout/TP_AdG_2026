@@ -75,7 +75,7 @@ micromamba self-update
 il est alors possible de créer un environnement dédié à notre logiciel hicstuff.
 
 ```sh
-micromamba create -n hicstuff bioconda::metator
+micromamba create -n hicstuff bioconda::hicstuff
 ```
 
 il faut ensuite activer l'envrionnement pour pouvoir utiliser hicstuff
@@ -100,6 +100,17 @@ gardez bien en tête qu'il faudra activer l'environnement à chaque fois que l'o
 
 
 si tout est ok, alors vous pouvez faire la même chose pour tinymapper.
+
+<details><summary>Solution</summary>
+<p>
+
+```sh
+micromamba create -n tinymapper bioconda::tinymapper
+micromamba activate tinymapper
+tinymapper --help
+micromamba deactivate
+```
+</p>
 
 
 
