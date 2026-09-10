@@ -22,7 +22,7 @@ cd  TP_HiC/
 toutes les lignes de commande que vous verrez s'exécuteront depuis cet emplacement désormais !!!!
 
 
-créer un répertoire pour y déposer les fichiers fastq et les fichiers log des différents logiciles
+créer un répertoire pour y déposer les fichiers fastq et les fichiers log des différents pipeline.
 
 ```sh
 mkdir -p fastq/
@@ -39,13 +39,13 @@ il faut également récupérer le fichier FastA correspondant à notre génome d
 
 ```sh
 mkdir -p ref/
-scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/ref/*.fa ref/
+scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/ref/Ecoli.fa ref/
 ```
 
-enfin nous aurons également besoin de fichiers fastq correspondant à du RNAseq (cc'est pour plus tard).
+enfin nous aurons également besoin de fichiers fastq correspondant à du RNAseq (c'est pour plus tard).
 
 ```sh
-scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/fastq/RNA* fastq/
+scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/fastq/RNA_coli* fastq/
 ```
 
 
