@@ -1,6 +1,8 @@
 # Session 3
 
-## analyse d'une matrice d'interaction
+## analyse d'une matrice d'interaction sous R
+
+### installation des packages R
 
 Pour commencer, nous allons installer les packages R nécessaire à l'analyse des données et faire quelques exercices sur les données tests.
 
@@ -23,6 +25,8 @@ BiocManager::install("HiContacts", ask = FALSE)
 BiocManager::install("GenomicRanges", ask = FALSE)
 BiocManager::install("dplyr", ask = FALSE)
 ```
+
+### les fichiers matrices
 
 on peut ensuite commencer à travailler sur nos fichiers matrices (i.e.: les fichiers cool).
 
@@ -80,6 +84,8 @@ hic1_zoom <- import(cf1, resolution=1000, focus="E_coli:1-50000")
 interactions(hic1_zoom)
 ```
 
+### plot d'une matrice d'interaction
+
 il existe ensuite une fonction pour visualiser directement la matrice:
 
 ```sh
@@ -93,6 +99,10 @@ plotMatrix(hic1_zoom)
 et oui c'est aussi simple que cela !!! 
 mais il existe pleins d'arguments à la fonction plotMatrix qui permettent de modifier l'image (voir l'aide).
 
+je vous laisse jouer un peu avec la fonction et realiser différentes représentation de cette matrice d'interaction.
+
+
+### autres opérations
 
 on peut également réaliser différentes opérations sur ces données de HiC:
 
@@ -163,6 +173,6 @@ voila une liste de scripts basé sur les données ainsi qu'un résumé de ce qu'
 * plot_HiC_shortscale.R : plot le signal HiC à courte distance d'une matrice d'interaction (signal normalisé) (exporte également les données brutes de l'analyse).
 
 
-vous pouvez explorer ces scripts et les utiliser sur le jeu de données d'Escherichia coli
+vous pouvez explorer ces scripts et les utiliser sur le jeu de données d'Escherichia coli.
 
 
