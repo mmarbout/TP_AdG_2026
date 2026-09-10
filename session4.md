@@ -14,7 +14,9 @@ et elles sont nommées selon le schéma suivant (X = numéro de votre binome):
 * Binome_X_2_R1.fq.gz
 * Binome_X_2_R2.fq.gz
 
-vous avez déjà récupéré le génome de référence (ref/PAO.fa).
+le génome de référence est la:
+
+sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/ref/PAO.fa
 
 faites moi une petite analyse / interprétations de vos résultats !! 
 
