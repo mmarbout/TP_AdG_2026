@@ -86,7 +86,7 @@ tinymapper --help
 micromamba deactivate
 ```
 </p>
-<details><summary>Solution</summary>
+<details>
 
 ### récupérations des données
 
