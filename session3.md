@@ -101,38 +101,9 @@ mais il existe pleins d'arguments à la fonction plotMatrix qui permettent de mo
 
 je vous laisse jouer un peu avec la fonction et realiser différentes représentation de cette matrice d'interaction.
 
-
 ### autres opérations
 
-on peut également réaliser différentes opérations sur ces données de HiC:
-
-
-* visualiser la loi de distance génomique
-
-```sh
-ps_from_hic <- distanceLaw(hic1, by_chr = TRUE)
-plotPs(ps_from_hic, aes(x = binned_distance, y = norm_p))
-plotPsSlope(ps_from_hic, aes(x = binned_distance, y = slope))
-```
-
-* visualiser les interactions d'une zone du génome avc le reste (4C plot)
-
-```sh
-v4C <- virtual4C(hic1, viewpoint = GRanges("E_coli:1-10000"))
-v4C
-```
-
-```sh
-df_4C <- as_tibble(v4C)
-ggplot(df_4C, aes(x = center, y = score)) + 
-    geom_area(position = "identity", alpha = 0.5) + 
-    theme_bw() + 
-    labs(x = "Position", y = "Contacts with viewpoint") +
-    scale_x_continuous(labels = scales::unit_format(unit = "M", scale = 1e-06)) + 
-    facet_wrap(~seqnames, scales = 'free_y')
-```
-
-* comparer deux matrices (à condition bien sur qu'elles aient été faites a partir du même génome)
+on peut également comparer deux matrices (à condition bien sur qu'elles aient été faites a partir du même génome)
 
 ```sh
 coolf2 <-("cool_files/XX.mcool")
@@ -150,27 +121,6 @@ plotMatrix(div_contacts,
     )
 ```
 
-
-## analyse d'une matrice d'interaction à partir de script R
-
-Je vous ai préparé différents scripts R permettant de réaliser directement certaines opérations sur vos données.
-
-Ces scripts se trouvent dans le dossier [/scripts]
-vous pouvez les lancer directement depuis un terminal.
-Ils prennent des arguments en entrée comme dans l'exemple ci dessous: 
-
-```sh
-scripts/./plot_matrix.r cool_files/exemple.mcool 5000 exemple_5kb.pdf
-```
-
-voila une liste de scripts basé sur les données ainsi qu'un résumé de ce qu'ils font:
-
-* plot_matrice.R : plot l'ensemble d'un fichier mcool.
-* plot_matrice_zoom.R : plot une région spécifique d'un fichier mcool.
-* plot_coverage : plot la couverture HiC (brut - raw) à courte distance le long du chromosome.
-* HiC_comparison.R : plot une matrice de comparaison (log ratio) de deux fichiers mcool
-* directionnal_index.R : plot le directionnal index d'une matrice d'interaction (exporte également les données brutes de l'analyse).
-* plot_HiC_shortscale.R : plot le signal HiC à courte distance d'une matrice d'interaction (signal normalisé) (exporte également les données brutes de l'analyse).
 
 
 vous pouvez explorer ces scripts et les utiliser sur le jeu de données d'Escherichia coli.
