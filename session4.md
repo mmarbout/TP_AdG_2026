@@ -14,9 +14,8 @@ et elles sont nommées selon le schéma suivant (X = numéro de votre binome):
 * Binome_X_2_R1.fq.gz
 * Binome_X_2_R2.fq.gz
 
-le génome de référence est la:
+comment faites vous pour me trouver sur quelle espèce nous avons fait la manip ?
 
-sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/ref/PAO.fa
 
 faites moi une petite analyse / interprétations de vos résultats !! 
 
