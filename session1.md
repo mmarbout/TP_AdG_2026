@@ -2,6 +2,8 @@
 
 ## mise en place de l'environnment et récupération des données
 
+### mise en place de l'environnement
+
 se placer sur le bureau de la Machine virtuelle
 
 ```sh
@@ -22,34 +24,7 @@ cd  TP_HiC/
 toutes les lignes de commande que vous verrez s'exécuteront depuis cet emplacement désormais !!!!
 
 
-créer un répertoire pour y déposer les fichiers fastq et les fichiers log des différents pipeline.
-
-```sh
-mkdir -p fastq/
-```
-
-Pour le moment, nous allons travailler avec un jeu de données du labo.
-Récupérer les données correspondants en copiant les fichiers fastq.
-
-```sh
-scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/fastq/exemple* fastq/
-```
-
-il faut également récupérer le fichier FastA correspondant à notre génome de référence.
-
-```sh
-mkdir -p ref/
-scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/ref/Ecoli.fa ref/
-```
-
-enfin nous aurons également besoin de fichiers fastq correspondant à du RNAseq (c'est pour plus tard).
-
-```sh
-scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/fastq/RNA_coli* fastq/
-```
-
-
-il nous reste une dernière chose à faire ... installer le pipeline hicstuff et le pipeline tinymapper qui permettent de traiter, respectivement, les données de HiC et de RNAseq.
+Il faut maintenant installer le pipeline hicstuff et le pipeline tinymapper qui permettent de traiter, respectivement, les données de HiC et de RNAseq.
 
 lien vers le github des programmes:
 
@@ -112,6 +87,37 @@ micromamba deactivate
 ```
 </p>
 
+### récupérations des données
+
+créer un répertoire pour y déposer les fichiers fastq et les fichiers log des différents pipeline.
+
+```sh
+mkdir -p fastq/
+```
+
+Pour le moment, nous allons travailler avec un jeu de données du labo.
+Récupérer les données correspondants en copiant les fichiers fastq.
+
+```sh
+scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/fastq/exemple* fastq/
+```
+
+il faut également récupérer le fichier FastA correspondant à notre génome de référence.
+
+```sh
+mkdir -p ref/
+scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/ref/Ecoli.fa ref/
+```
+
+enfin nous aurons également besoin de fichiers fastq correspondant à du RNAseq (c'est pour plus tard).
+
+```sh
+scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/fastq/RNA_coli* fastq/
+```
+
+tout est bon ?
+
+alors on y va !!
 
 
 
