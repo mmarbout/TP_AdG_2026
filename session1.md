@@ -87,6 +87,7 @@ micromamba deactivate
 ```
 </p>
 
+
 ### récupérations des données
 
 créer un répertoire pour y déposer les fichiers fastq et les fichiers log des différents pipeline.
