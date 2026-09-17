@@ -16,8 +16,18 @@ et elles sont nommées selon le schéma suivant (X = numéro de votre binome):
 
 comment faites vous pour me trouver sur quelle espèce nous avons fait la manip ?
 
+si c'est bon pour vous ... je vous laisse vous débrouiller pour aller me chercher le génome et construire votre matrice comme nous l'avons vu précédemment.
+
+
+<details><summary>Travail Perso</summary>
+<p>
 
 faites moi une petite analyse / interprétations de vos résultats !! 
 
 ![tableau_binome](docs/images/tableau2.png)
+
+</p>
+</details>
+
+
 
