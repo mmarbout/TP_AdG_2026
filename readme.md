@@ -26,7 +26,7 @@ echo "ceci est une ligne de commande"
 ## Planning des sessions 
 
 * 1 - mise en place de l'environnement et récupération des données.
-* 2 - génération du fichier matrice (fichier .cool) et visualisation d'une matrice.
+* 2 - génération d'un fichier matrice (cool ou mcool).
 * 3 - comparaison de matrices.
 * 4 - analyse de matrice.
 * 5 - analyse de données de RNAseq.
