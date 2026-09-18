@@ -118,6 +118,36 @@ scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAI
 
 tout est bon ?
 
+il nous reste à installer les packages R.
+
+ouvrez R studio
+
+### installation des packages R
+
+Pour commencer, nous allons installer les packages R nécessaire à l'analyse des données et faire quelques exercices sur les données tests.
+
+PS: si vous le souhaitez, voici un lien vers un tutorial du package HiCExperiment :
+[Tuto HiCExperiment](https://jserizay.com/OHCA/docs/devel/pages/data-representation.html)
+
+
+lancer R studio et mettez vous dans le répertoire adéquat (TP_HiC) puis installez les packages suivant:
+
+```sh
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install(version = "3.18")
+```
+
+```sh
+BiocManager::install("HiCExperiment", ask = FALSE)
+BiocManager::install("HiCool", ask = FALSE)
+BiocManager::install("HiContacts", ask = FALSE)
+BiocManager::install("GenomicRanges", ask = FALSE)
+BiocManager::install("dplyr", ask = FALSE)
+```
+
+c'est tout bon ??
+
 alors on y va !!
 
 
