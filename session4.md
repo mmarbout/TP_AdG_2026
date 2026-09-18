@@ -1,6 +1,6 @@
 # Session 4
 
-## Travail en autonomie
+## Travail en autonomie sur votre jeu de données
 
 vos banques sont la:
 
