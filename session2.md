@@ -35,7 +35,7 @@ les arguments à donner obligatoirement sont le génome (ou l'index), les fichie
 voici la commande à lancer (c'est un exemple à partir d'un jeu de données de Escherichia coli):
 
 ```sh
-hicstuff pipeline --genome ref/Ecoli.fa --binning 1000 --distance-law --duplicates --enzyme DpnII,HinfI --filter --outdir hic/exemple/ --plot --prefix exemple --threads 4 --skip-count fastq/exemple_R1.fq.gz fastq/exemple_R2.fq.gz
+hicstuff pipeline --genome ref/Ecoli.fa --binning 1000 --distance-law --duplicates --enzyme DpnII,HinfI --outdir hic/exemple/ --plot --prefix exemple --threads 4 --skip-count fastq/exemple_R1.fq.gz fastq/exemple_R2.fq.gz
 ```
 
 cela ne devrait pas prendre plus de 10 minutes ...  
