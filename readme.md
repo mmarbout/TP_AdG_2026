@@ -31,7 +31,7 @@ echo "ceci est une ligne de commande"
 * 4 - Travail en autonomie sur votre jeu de données.
 * 5 - Traitement et analyse de données RNAseq.
 * 6 - un browser tout en 1 ...
-* 7 - session en autonomie.
+* 7 - Session de travail en groupe.
 
 
 ## Contact
