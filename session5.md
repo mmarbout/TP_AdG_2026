@@ -1,6 +1,6 @@
 # Session 4
 
-## Traitement de données RNAseq
+## Traitement et analyse de données RNAseq
 
 on va commencer par récupérer des données issues d'une manip de RNAseq
 
