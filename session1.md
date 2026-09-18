@@ -144,6 +144,7 @@ BiocManager::install("HiCool", ask = FALSE)
 BiocManager::install("HiContacts", ask = FALSE)
 BiocManager::install("GenomicRanges", ask = FALSE)
 BiocManager::install("dplyr", ask = FALSE)
+BiocManager::install("RColorBrewer", ask = FALSE)
 ```
 
 c'est tout bon ??
