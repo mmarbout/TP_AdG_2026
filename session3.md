@@ -101,7 +101,7 @@ mais il existe pleins d'arguments à la fonction plotMatrix qui permettent de mo
 
 je vous laisse jouer un peu avec la fonction et realiser différentes représentation de cette matrice d'interaction.
 
-### autres opérations
+### comparaisons de deux matrices d'interactions
 
 on peut également comparer deux matrices (à condition bien sur qu'elles aient été faites a partir du même génome)
 
@@ -121,8 +121,17 @@ plotMatrix(div_contacts,
     )
 ```
 
+### filtres des matrices d'interactions
+
+sortez de R studio et retournez sur le terminal.
+activez l'environnement hicstuff et refaites tourner le pipeline en activant l'option --filter
+
+* Q: Quels filtres le pipeline a appliqué sur les données ?
+* Q: Quels est le taux de reads conservées après le filtre de vos données ?
+
+maintenant, retournez sous R et comparez vos deux matrices (unfilter vs. filter)
 
 
-vous pouvez explorer ces scripts et les utiliser sur le jeu de données d'Escherichia coli.
+
 
 
