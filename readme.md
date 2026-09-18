@@ -27,7 +27,7 @@ echo "ceci est une ligne de commande"
 
 * 1 - mise en place de l'environnement et récupération des données.
 * 2 - génération d'un fichier matrice (cool ou mcool).
-* 3 - comparaison de matrices.
+* 3 - analyse d'une matrice d'interaction sous R.
 * 4 - analyse de matrice.
 * 5 - analyse de données de RNAseq.
 * 6 - intégration des données HiC et de RNAseq.
