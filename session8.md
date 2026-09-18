@@ -1,4 +1,4 @@
 # Session 8
 
-## Session en autonomie par groupe de travail !!
+## Session de travail en groupe
 
