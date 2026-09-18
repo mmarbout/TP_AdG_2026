@@ -52,8 +52,6 @@ je vous laisse explorer tout ca et répondre aux questions suivantes:
 * Q: Combien de reads initial avions nous dans ce jeu de données ?
 * Q: Quel est le taux de mapping de ces données sur le génome de référence ?
 * Q: Quel est le taux de duplicats de PCR ?
-* Q: Quels filtres le pipeline a appliqué sur les données ?
-* Q: Quels est le taux de reads conservées après le filtre de vos données ?
 * Q: combien votre matrice contient de contacts ?
 
 
