@@ -5,7 +5,7 @@
 on va commencer par récupérer des données issues d'une manip de RNAseq
 
 ```sh
-commande recuperation dta
+scp sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/session4/PAO_RNA_R1.fq.gz fastq/
 ```
 
 vous pouvez vérifier que vous les avez bien récupérées 
@@ -86,6 +86,7 @@ library(ggplot2)
 # import des données
 track_rna=read.table("MM301_unstranded_bin1000.CPM.bed")
 
+#creation du plot vaec ggplot
 ggplot(track_rna,aes(x=track_rna$V2,y=track_rna$V4))+
 + geom_line()
 
