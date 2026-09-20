@@ -4,7 +4,7 @@
 
 vos banques sont la:
 
-sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/fastq/
+sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/session4/
 
 et elles sont nommées selon le schéma suivant (X = numéro de votre binome): 
 
