@@ -1,5 +1,30 @@
 # Session 2
 
+## récupérations des données
+
+Pour le moment, nous allons travailler avec un jeu de données du labo.
+Créer un répertoire pour y déposer les fichiers fastq et un répertoire pour le génome de référence
+
+```sh
+mkdir -p fastq/
+mkdir -p ref/
+```
+
+Récupérer les données correspondants en copiant les fichiers fastq.
+
+```sh
+scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/session2/exemple* fastq/
+```
+
+il faut également récupérer le fichier FastA correspondant à notre génome de référence.
+
+```sh
+mkdir -p ref/
+scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/session2/Ecoli.fa ref/
+```
+
+si tout est bon, on peut vraiment commencer !! 
+
 ## génération d'un fichier matrice
 
 le pipeline hicstuff permet de générer, à partir d'un génome (fasta) et de données de séuqnçage (HiC), un fihcier mcool (multicool) qui est le format standard des données HiC. 
@@ -44,7 +69,7 @@ maintenant que c'est fait , vous pouvez regarder où en est votre pipeline hicst
 
 
 ```sh
-ls HiC/exemple/
+ls hic/exemple/
 ```
 
 je vous laisse explorer tout ca et répondre aux questions suivantes:
