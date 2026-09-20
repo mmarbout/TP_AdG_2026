@@ -120,32 +120,9 @@ BiocManager::install("RColorBrewer", ask = FALSE)
 
 c'est tout bon ??
 
-alors on y va !!
+alors on va pouvoir s'y mettre ...
 
 
-### récupérations des données
-
-créer un répertoire pour y déposer les fichiers fastq et les fichiers log des différents pipeline.
-
-```sh
-mkdir -p fastq/
-```
-
-Pour le moment, nous allons travailler avec un jeu de données du labo.
-Récupérer les données correspondants en copiant les fichiers fastq.
-
-```sh
-scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/fastq/exemple* fastq/
-```
-
-il faut également récupérer le fichier FastA correspondant à notre génome de référence.
-
-```sh
-mkdir -p ref/
-scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/ref/Ecoli.fa ref/
-```
-
-si tout est bon, on peut vraiment commencer !! 
 
 
 
