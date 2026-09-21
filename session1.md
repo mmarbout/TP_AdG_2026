@@ -1,6 +1,6 @@
 # Session 1
 
-## mise en place de l'environnment et récupération des données
+## mise en place de l'environnement de travail et des pipelines
 
 ### mise en place de l'environnement
 
@@ -88,20 +88,20 @@ micromamba deactivate
 </p>
 </details>
 
-c'est bon pour vous ?? allez on continue avec les packages R ...
+c'est bon pour vous ?? allez on continue avec l'installation des packages R ...
 
 
 ### installation des packages R
 
 ouvrez R studio
 
-Nous allons installer les packages R nécessaire à l'analyse des données et faire quelques exercices sur les données tests.
+Nous allons installer les packages R nécessaire à l'analyse des données.
 
 PS: si vous le souhaitez, voici un lien vers un tutorial du package HiCExperiment :
 [Tuto HiCExperiment](https://jserizay.com/OHCA/docs/devel/pages/data-representation.html)
 
 
-lancer R studio et mettez vous dans le répertoire adéquat (TP_HiC) puis installez les packages suivant:
+lancer R studio puis installez les packages suivant:
 
 ```sh
 if (!require("BiocManager", quietly = TRUE))
