@@ -108,6 +108,7 @@ activez l'environnement hicstuff et refaites tourner le pipeline en activant l'o
 <details><summary>Solution</summary>
 <p>
 
+![filer](docs/images/filter.png)
 
 </p>
 </details>
