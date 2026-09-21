@@ -44,20 +44,19 @@ plotMatrix(hic_chr)
 hic_pls <- import(cf, resolution=1000, focus="pJN105")
 plotMatrix(hic_pls)
 
-</p>
-</detail>
 ```
+</p>
+</details>
 
 
 nous allons maintenant voir comment visualiser les interactions d'une molécule d'ADN avec l'autre (4C plot).
 
 
 ```sh
-v4C <- virtual4C(hic1, viewpoint = GRanges("NZ_CP009712.1:1-10000"))
+v4C <- virtual4C(hic, viewpoint = GRanges("pJN105:1-6055"))
 v4C
-```
 
-```sh
+
 df <- as_tibble(v4C)
 ggplot(df, aes(x = center, y = score)) + 
     geom_area(position = "identity", alpha = 0.5) + 
