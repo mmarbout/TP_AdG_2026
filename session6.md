@@ -19,5 +19,18 @@ vous allez ensuite me répondre aux questions suivantes:
 * pouvez vous en déduire une abondance relative de chaque molécule ?
 
 
-nous allons maintenant faire différentes analyses sur ce fichier ... ouvrez R studio
+nous allons maintenant faire différentes analyses sur ce fichier ... ouvrez R studio et faites moi un plot de la matrice d'interaction.
 
+
+```sh
+library(HiCExperiment)
+library(HiContacts)
+library(GenomicRanges)
+library(ggplot2)
+library(dplyr)
+
+
+coolf1 <-("HiC/exemple/exemple.mcool")
+cf1 <- CoolFile(coolf1)
+
+```
