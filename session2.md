@@ -83,7 +83,7 @@ Cooler est un programme de prise en charge d'un format de stockage utilisé pour
 
 Le format de fichier Cooler est une implémentation d'un modèle de données matricielles génomiques utilisant HDF5 comme format de conteneur. Le paquet Cooler comprend une suite d'outils en ligne de commande ainsi qu'une API Python pour faciliter la création, l'interrogation et la manipulation des fichiers Cooler.
 
-![cooler](docs/images/cool_tool.png)
+![cool_tool](docs/images/cooltool.png)
 
 [cooler package](https://github.com/open2c/cooler)
 
