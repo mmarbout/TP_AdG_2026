@@ -14,7 +14,7 @@ library(ggplot2)
 library(dplyr)
 
 
-coolf1 <-("cool_files/exemple.mcool")
+coolf1 <-("HiC/exemple/exemple.mcool")
 cf1 <- CoolFile(coolf1)
 ```
 
@@ -82,7 +82,7 @@ je vous laisse jouer un peu avec la fonction et realiser différentes représent
 on peut également comparer deux matrices (à condition bien sur qu'elles aient été faites a partir du même génome)
 
 ```sh
-coolf2 <-("cool_files/XX.mcool")
+coolf2 <-("HiC/exemple/exemple.mcool")
 cf2 <- CoolFile(coolf2)
 hic2 <- import(cf2, resolution=5000)
 ```
