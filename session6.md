@@ -45,7 +45,7 @@ hic_pls <- import(cf, resolution=1000, focus="pJN105")
 plotMatrix(hic_pls)
 
 </p>
-</details>
+</detail>
 ```
 
 
