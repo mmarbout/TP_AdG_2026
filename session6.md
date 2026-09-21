@@ -49,13 +49,35 @@ plotMatrix(hic_pls)
 </details>
 
 
-nous allons maintenant voir comment visualiser les interactions d'une molécule d'ADN avec l'autre (4C plot).
+nous allons maintenant voir comment étudier les interactions entre deux molécules d'ADN.
 
+Le rapport entre les interactions *cis* et les interactions *trans* est souvent utilisé pour évaluer les interactions entre molécules d'ADN. Il peut être calculé pour chaque molécule à l'aide de la fonction `cisTransRatio()`. Vous devrez fournir un objet `HiCExperiment` couvrant l'ensemble du génome pour estimer les rapports *cis*/*trans* !
+
+```sh
+hic <- import(cf, resolution = 1000)
+ct <- cisTransRatio(hic) 
+ct
+```
+
+Il peut être représenté graphiquement à l'aide de fonctions de visualisation basées sur ggplot2.
+
+
+```sh
+ggplot(ct, aes(x = chr, y = cis_pct)) + 
+    geom_col(position = position_stack()) + 
+    theme_bw() + 
+    guides(x=guide_axis(angle = 90)) + 
+    scale_y_continuous(labels = scales::percent) + 
+    labs(x = 'Chromosomes', y = '% of cis contacts')
+```
+
+On peut également analyser le profil d'interaction d'un locus génomique d'intérêt ou d'une molécule d'ADN avec son environnement immédiat ou avec le reste du génome. Dans certains cas, cela peut aider à identifier et/ou à comparer des interactions régulatrices ou structurelles. Cela peut également servir a analyser l'interaction d'une petite molécule d'ADN avec le génome de l'hôte.
+
+Par exemple, il est possible de calculer le profil d'interaction « 4C virtuel » à l'échelle du génome, ancré au niveau du plasmide pJN105.
 
 ```sh
 v4C <- virtual4C(hic, viewpoint = GRanges("pJN105:1-6055"))
 v4C
-
 
 df <- as_tibble(v4C)
 ggplot(df, aes(x = center, y = score)) + 
