@@ -1,11 +1,23 @@
 # Session 6
 
 
-## étude des intéractions entre moécules d'ADN
+## étude des intéractions entre molécules d'ADN
 
-introduire le 4C en utilisant l'exemple du plasmide Pseudomonas
+pour cette session, vous allez commencer par me récupérer un fichier cool sur GAIA.
 
 
 ```sh
-scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/fastq/RNA_coli* fastq/
+mkdir -p cool_file/
+scp sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/session5/PAO_pJN105.mcool cool_file/
 ```
+
+vous allez ensuite me répondre aux questions suivantes:
+
+* Combien de molécules d'ADN contient votre fichier cool ?
+* quelle est leur taille ?
+* combien de contact intra-molécules contient chaque molécule d'ADN ?
+* pouvez vous en déduire une abondance relative de chaque molécule ?
+
+
+nous allons maintenant faire différentes analyses sur ce fichier ... ouvrez R studio
+
