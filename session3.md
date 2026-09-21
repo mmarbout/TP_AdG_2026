@@ -105,6 +105,14 @@ activez l'environnement hicstuff et refaites tourner le pipeline en activant l'o
 * Q: Quels filtres le pipeline a appliqué sur les données ?
 * Q: Quels est le taux de reads conservées après le filtre de vos données ?
 
+<details><summary>Solution</summary>
+<p>
+
+
+</p>
+</details>
+
+
 maintenant, retournez sous R et comparez vos deux matrices (unfilter vs. filter)
 
 
