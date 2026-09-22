@@ -11,6 +11,10 @@ tout simplement ... pour apprendre a traiter des données et à les visualiser..
 
 vous allez commencer par récupérer les donnes pour cette session
 
+‘‘‘sh
+scp sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/session5/V_cholerae.mcool cool_file/
+‘‘‘
+
 
 allez ... ca se passe ici :
 
