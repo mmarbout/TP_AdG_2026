@@ -45,7 +45,7 @@ STAR --genomeDir ref/PAO/STAR/ --readFilesCommand zcat --runThreadN 4 --readFile
 il faut ensuite trier les reads, créer un index de ces reads (programme=samtools) (3-4 minutes)
 
 ```sh
-samtools sort -@ 4 --output-fmt bam -l 9 -T RNA_track/bam/genome/MM301/MM301^mapped_PAO^73BGKE.bam_sorting -o RNA_track/bam/genome/MM301/MM301^mapped_PAO^filtered^73BGKE.bam RNA_track/MM301.bam.
+samtools sort -@ 4 --output-fmt bam -l 9 -T RNA_track/bam/genome/MM301/MM301.bam_sorting -o RNA_track/bam/genome/MM301/MM301_filtered.bam RNA_track/MM301.bam.
 samtools index -@ 4 RNA_track/MM301_filtered.bam
 ```
 
