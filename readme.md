@@ -32,8 +32,9 @@ echo "ceci est une ligne de commande"
 * 3 - analyse d'une matrice d'interaction sous R.
 * 4 - Travail en autonomie sur votre jeu de données.
 * 5 - Traitement et analyse de données RNAseq.
-* 6 - un browser tout en 1 ...
-* 7 - Session de travail en groupe.
+* 6 - étude des intéractions entre molécules d'ADN
+* 7 - un browser tout en 1 ...
+* 8 - Session de travail en groupe.
 
 
 ## Contact
