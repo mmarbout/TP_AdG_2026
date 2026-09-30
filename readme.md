@@ -27,7 +27,7 @@ echo "ceci est une ligne de commande"
 
 ## Planning des sessions 
 
-* 1 - mise en place de l'environnement et récupération des données.
+* 1 - mise en place de l'environnement de travail et des pipelines.
 * 2 - génération d'un fichier matrice (cool ou mcool).
 * 3 - analyse d'une matrice d'interaction sous R.
 * 4 - Travail en autonomie sur votre jeu de données.
