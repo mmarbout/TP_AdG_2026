@@ -7,7 +7,9 @@
 
 
 Ce TP a pour objectif de vous apprendre à analyser des données de Hi-C.
-[publication](https://www.science.org/doi/10.1126/science.1181369)
+
+
+la publication sur le première utilisation du Hi-C pour étudier le génome humain est la --> [publication](https://www.science.org/doi/10.1126/science.1181369)
 
 Nous allons partir des fichiers FastQ issus du séquençage de nos librairies et réaliser l'ensemble de l'analyse.
 L'objectif est d'apprendre à réaliser ces analyses, comprendre ce qu'elles peuvent apporter sur la compréhension de l'architecture du chromosome bactérien afin d'appliquer ce que vous aurez appris sur un jeux de données issues d'une cinétique de l'infection de Pseudomonas aeruginosa par le phage PAK_P3.
