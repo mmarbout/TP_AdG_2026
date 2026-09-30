@@ -109,12 +109,26 @@ puis installer le package patchwork ou cowplot et essayer de me combiner ces deu
 <details><summary>Solution</summary>
 <p>
 
+on se place dans le terminal et dans le bon repertoire
+
+```sh
+
+bamCoverage --bam RNA_track/MM301_filtered.bam --outFileFormat bedgraph --outFileName RNA_track/MM301_forward_bin1000.CPM.bed --binSize 1000 --numberOfProcessors 4  --normalizeUsing CPM --skipNonCoveredRegions  --ignoreDuplicates --filterRNAstrand forward
+
+bamCoverage --bam RNA_track/MM301_filtered.bam --outFileFormat bedgraph --outFileName RNA_track/MM301_reverse_bin1000.CPM.bed --binSize 1000 --numberOfProcessors 4  --normalizeUsing CPM --skipNonCoveredRegions  --ignoreDuplicates --filterRNAstrand reverse
+```
+
+on bascule dans R studio
+
 ```sh
 install.packages("cowplot")
 library(cowplot)
+library(ggplot2)
 
-rna_for=read.table("MM301_for_bin1000.CPM.bed")
-rna_rev=read.table("MM301_rev_bin1000.CPM.bed")
+setwd("RNA_track/")
+
+rna_for=read.table("MM301_forward_bin1000.CPM.bed")
+rna_rev=read.table("MM301_reverse_bin1000.CPM.bed")
 
 p0 <- plotMatrix(
 	hic1,
