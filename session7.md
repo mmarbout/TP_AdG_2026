@@ -6,7 +6,7 @@ je suis sur que vous allez adorer cette session !!
 
 et probablement me dire ... pourquoi avoir fait tout ca ???
 
-tout simplement ... pour apprendre a traiter des données et à les visualiser... mieux comprendre comment tout cela fonctionne
+tout simplement ... pour apprendre a traiter des données et à les visualiser... mieux comprendre comment tout cela fonctionne. Et puis il faut bien être en mesure de générer les fichiers initiaux.
 
 
 vous allez commencer par récupérer les donnes pour cette session
