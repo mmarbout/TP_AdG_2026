@@ -1,6 +1,8 @@
 # Session 2
 
-## récupérations des données
+## génération d'un fichier matrice
+
+### récupérations des données
 
 Pour le moment, nous allons travailler avec un jeu de données du labo.
 Créer un répertoire pour y déposer les fichiers fastq et un répertoire pour le génome de référence.
@@ -25,7 +27,7 @@ scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAI
 
 si tout est bon, on peut vraiment commencer !! 
 
-## génération d'un fichier matrice
+### le pipeline hicstuff
 
 le pipeline hicstuff permet de générer, à partir d'un génome (fasta) et de données de séuqnçage (HiC), un fihcier mcool (multicool) qui est le format standard des données HiC. 
 
@@ -78,10 +80,12 @@ je vous laisse explorer le fichier log de hicstuff et répondre aux questions su
 * Q: Quel est le taux de duplicats de PCR ?
 * Q: combien votre matrice contient de contacts ?
 
+### exploration d'un fichier mcool avec le package cooler
+
 on peut également explorer le fichier de sortie (exemple.mcool) avec le package cooler qui est le programme de gestion des fichiers cool ou mcool.
 Cooler est un programme de prise en charge d'un format de stockage utilisé pour stocker des données d'interaction génomique, telles que les matrices de contact Hi-C.
 
-Le format de fichier Cooler est une implémentation d'un modèle de données matricielles génomiques utilisant HDF5 comme format de conteneur. Le paquet Cooler comprend une suite d'outils en ligne de commande ainsi qu'une API Python pour faciliter la création, l'interrogation et la manipulation des fichiers Cooler.
+Le format de fichier Cooler est une implémentation d'un modèle de données matricielles génomiques utilisant HDF5 comme format de conteneur. Le package Cooler comprend une suite d'outils en ligne de commande ainsi qu'une API Python pour faciliter la création, l'interrogation et la manipulation des fichiers Cooler.
 
 ![cool_tool](docs/images/cooltool.png)
 
@@ -92,7 +96,8 @@ Le format de fichier Cooler est une implémentation d'un modèle de données mat
 ls cooler -h
 ```
 
-la commande dump permet notamment d'avoir accès aux tables du fichier HDF5
+la commande dump permet notamment d'avoir accès aux tables du fichier HDF5. 
+Il y a plein d'autres commandes dans le package cooler ...
 
 ![cool_file](docs/images/cool_file.png)
 
