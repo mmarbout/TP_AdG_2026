@@ -15,14 +15,14 @@ mkdir -p ref/
 Récupérer les données correspondants en copiant les fichiers fastq.
 
 ```sh
-scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/session2/exemple* fastq/
+scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/AdG2026/TP_HiC/session2/exemple* fastq/
 ```
 
 il faut également récupérer le fichier FastA correspondant à notre génome de référence.
 
 ```sh
 mkdir -p ref/
-scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/session2/Ecoli.fa ref/
+scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/AdG2026/TP_HiC/session2/Ecoli.fa ref/
 ```
 
 si tout est bon, on peut vraiment commencer !! 
