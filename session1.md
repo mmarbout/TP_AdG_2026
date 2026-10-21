@@ -7,7 +7,7 @@
 se placer sur le bureau de la Machine virtuelle
 
 ```sh
-cd ~/Bureau/
+cd ~/Desktop/
 ```
 
 créer un répertoire (l'option -p permet de créer des répertoires de manière recursive et dans des répertoires n'existant pas et évite les messages d'erreurs ... c'est parfois utile et c'est un réflexe chez moi)
@@ -41,6 +41,8 @@ lien vers le github du programme:
 ```sh
 "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
 ```
+répondez aux différentes questions que vous pose le terminal ...
+
 
 une fois installé , nous pouvons vérifier que tout se passe bien en faisant un update de micromaba
 
@@ -76,17 +78,12 @@ gardez bien en tête qu'il faudra activer l'environnement à chaque fois que l'o
 
 si tout est ok, alors vous pouvez faire la même chose pour tinymapper.
 
-<details><summary>Solution</summary>
-<p>
-
 ```sh
-micromamba create -n tinymapper bioconda::tinymapper
+micromamba env create -n tinymapper -f https://raw.githubusercontent.com/js2264/tinyMapper/refs/heads/master/env/conda-lock.yml -y
 micromamba activate tinymapper
 tinymapper --help
 micromamba deactivate
 ```
-</p>
-</details>
 
 c'est bon pour vous ?? allez on continue avec l'installation des packages R ...
 
