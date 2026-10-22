@@ -52,7 +52,7 @@ micromamba self-update
 il est alors possible de créer un environnement dédié à notre logiciel hicstuff.
 
 ```sh
-micromamba create -n hicstuff bioconda::hicstuff
+micromamba create -n hicstuff bioconda::hicstuff==3.2.5
 ```
 
 il faut ensuite activer l'envrionnement pour pouvoir utiliser hicstuff
