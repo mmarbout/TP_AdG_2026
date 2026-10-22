@@ -8,7 +8,7 @@ pour cette session, vous allez commencer par me récupérer un fichier cool sur 
 
 ```sh
 mkdir -p cool_file/
-scp sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/session5/V_cholerae.mcool cool_file/
+scp sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/AdG2026/TP_HiC/session6/V_cholerae.mcool cool_file/
 ```
 
 vous allez ensuite me répondre aux questions suivantes:
@@ -54,7 +54,7 @@ plotMatrix(hic_chr2)
 
 nous allons maintenant voir comment étudier les interactions entre deux molécules d'ADN.
 
-on peut déjà commencer par faire une matrice des interactions inter-chromosomiques 
+on peut déjà commencer par faire une matrice des interactions inter-chromosomiques (dans Rstudio)
 
 ```sh
 hic_interchr<- import(cf, resolution=5000, focus="V_cholerae_chr1|V_cholerae_chr2")
