@@ -41,7 +41,7 @@ lien vers le github du programme:
 ```sh
 "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
 ```
-répondez aux différentes questions que vous pose le terminal ...
+répondez aux différentes questions que vous pose le terminal sur les chemins d'accès et autre...
 
 
 une fois installé , nous pouvons vérifier que tout se passe bien en faisant un update de micromaba
@@ -67,6 +67,12 @@ on peut vérifier facilement que tout est ok en appelant la doc de hicstuff.
 hicstuff --help
 ```
 
+il faut également vérifier la version que vous avez (nous devons avoir la version 3.2.5).
+
+```sh
+hicstuff --version
+```
+
 pour désactiver l'environnement, il suffit de taper la commande suivante
 
 ```sh
@@ -76,7 +82,7 @@ micromamba deactivate
 gardez bien en tête qu'il faudra activer l'environnement à chaque fois que l'on veut utiliser hicstuff.
 
 
-si tout est ok, alors vous pouvez faire la même chose pour tinymapper.
+si tout est ok, alors vous pouvez faire la même chose pour tinymapper en suivant les commandes ci-dessous.
 
 ```sh
 micromamba env create -n tinymapper -f https://raw.githubusercontent.com/js2264/tinyMapper/refs/heads/master/env/conda-lock.yml -y
@@ -103,7 +109,7 @@ lancer R studio puis installez les packages suivant:
 ```sh
 if (!require("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
-BiocManager::install(version = "3.18")
+BiocManager::install(version = "3.22")
 ```
 
 ```sh
