@@ -4,7 +4,7 @@
 
 vos banques sont la:
 
-sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/session4/
+sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/AdG2026/TP_HiC/session4/
 
 et elles sont nommées selon le schéma suivant (X = numéro de votre binome): 
 
@@ -13,7 +13,7 @@ et elles sont nommées selon le schéma suivant (X = numéro de votre binome):
 * Binome_X_2_R1.fq.gz
 * Binome_X_2_R2.fq.gz
 
-comment faites vous pour me trouver sur quelle espèce nous avons fait la manip ?
+comment feriez vous pour me trouver sur quelle espèce nous avons fait la manip ?
 
 si c'est bon pour vous ... je vous laisse vous débrouiller pour aller me chercher le génome et construire votre matrice comme nous l'avons vu précédemment.
 
