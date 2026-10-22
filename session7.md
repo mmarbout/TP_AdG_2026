@@ -12,7 +12,7 @@ tout simplement ... pour apprendre a traiter des données et à les visualiser..
 vous allez commencer par récupérer les donnes pour cette session
 
 ```sh
-scp -r sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/session7/ ./
+scp -r sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/AdG2026/TP_HiC/session7/ ./
 ```
 
 pour le reste ... ca se passe ici :
