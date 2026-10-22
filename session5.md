@@ -5,13 +5,19 @@
 on va commencer par récupérer des données issues d'une manip de RNAseq
 
 ```sh
-scp sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/GAIA_ENSEIGNEMENTS/AdG_2026-2027/HiC/session4/PAO_RNA_R1.fq.gz fastq/
+scp sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/AdG2026/TP_HiC/session5/PAO_RNA_R1.fq.gz fastq/
 ```
 
 vous pouvez vérifier que vous les avez bien récupérées 
 
 ```sh
 ls fastq/
+```
+
+il faut également récupérer le génome de référence: 
+
+```sh
+scp sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/AdG2026/TP_HiC/session5/PAO.fa ref/
 ```
 
 on va ensuite utiliser le package tinymapper qui contient tous les software nécessaire pour traiter ces données.
@@ -38,14 +44,14 @@ STAR --runMode genomeGenerate --genomeFastaFiles ref/PAO.fa --genomeDir ref/PAO/
 ensuite on peut faire l'alignement (6-8 minutes)
 
 ```sh
-STAR --genomeDir ref/PAO/STAR/ --readFilesCommand zcat --runThreadN 4 --readFilesIn fastq/MM301_R1.fq.gz --outFileNamePrefix RNA_track/MM301.bam. --outSAMtype BAM Unsorted --outSAMunmapped None --outSAMattributes Standard
+STAR --genomeDir ref/PAO/STAR/ --readFilesCommand zcat --runThreadN 4 --readFilesIn fastq/PAO_RNA_R1.fq.gz --outFileNamePrefix RNA_track/PAO.bam. --outSAMtype BAM Unsorted --outSAMunmapped None --outSAMattributes Standard
 ```
 
 
 il faut ensuite trier les reads, créer un index de ces reads (programme=samtools) (3-4 minutes)
 
 ```sh
-samtools sort -@ 4 --output-fmt bam -l 9 -T RNA_track/bam/genome/MM301/MM301.bam_sorting -o RNA_track/bam/genome/MM301/MM301_filtered.bam RNA_track/MM301.bam.
+samtools sort -@ 4 --output-fmt bam -l 9 -T RNA_track/PAO.bam_sorting -o RNA_track/PAO_filtered.bam RNA_track/PAO.bam.Aligned.out.bam
 samtools index -@ 4 RNA_track/MM301_filtered.bam
 ```
 
