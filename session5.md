@@ -52,7 +52,7 @@ il faut ensuite trier les reads, créer un index de ces reads (programme=samtool
 
 ```sh
 samtools sort -@ 4 --output-fmt bam -l 9 -T RNA_track/PAO.bam_sorting -o RNA_track/PAO_filtered.bam RNA_track/PAO.bam.Aligned.out.bam
-samtools index -@ 4 RNA_track/MM301_filtered.bam
+samtools index -@ 4 RNA_track/PAO_filtered.bam
 ```
 
 on peut ensuite créer nos profils de couverture de RNA avec le programme bamCoverage.
@@ -69,7 +69,7 @@ on va commencer doucement ...
 
 
 ```sh
-bamCoverage --bam RNA_track/MM301_filtered.bam --outFileFormat bedgraph --outFileName RNA_track/MM301_unstranded_bin1000.CPM.bed --binSize 1000 --numberOfProcessors 4  --normalizeUsing CPM --skipNonCoveredRegions  --ignoreDuplicates
+bamCoverage --bam RNA_track/PAO_filtered.bam --outFileFormat bedgraph --outFileName RNA_track/PAO_unstranded_bin1000.CPM.bed --binSize 1000 --numberOfProcessors 4  --normalizeUsing CPM --skipNonCoveredRegions  --ignoreDuplicates
 ```
 
 
@@ -77,7 +77,7 @@ si c'est bon pour vous , on va allez jeter un oeil à cela.
 
 
 ```sh
-head RNA_track/MM301_unstranded_bin1000.CPM.bed
+head RNA_track/PAO_unstranded_bin1000.CPM.bed
 ```
 
 
@@ -90,7 +90,7 @@ ouvrez R studio.
 library(ggplot2)
 
 # import des données
-track_rna=read.table("MM301_unstranded_bin1000.CPM.bed")
+track_rna=read.table("PAO_unstranded_bin1000.CPM.bed")
 
 #creation du plot vaec ggplot
 ggplot(track_rna,aes(x=track_rna$V2,y=track_rna$V4))+
@@ -119,9 +119,9 @@ on se place dans le terminal et dans le bon repertoire
 
 ```sh
 
-bamCoverage --bam RNA_track/MM301_filtered.bam --outFileFormat bedgraph --outFileName RNA_track/MM301_forward_bin1000.CPM.bed --binSize 1000 --numberOfProcessors 4  --normalizeUsing CPM --skipNonCoveredRegions  --ignoreDuplicates --filterRNAstrand forward
+bamCoverage --bam RNA_track/PAO_filtered.bam --outFileFormat bedgraph --outFileName RNA_track/PAO_forward_bin1000.CPM.bed --binSize 1000 --numberOfProcessors 4  --normalizeUsing CPM --skipNonCoveredRegions  --ignoreDuplicates --filterRNAstrand forward
 
-bamCoverage --bam RNA_track/MM301_filtered.bam --outFileFormat bedgraph --outFileName RNA_track/MM301_reverse_bin1000.CPM.bed --binSize 1000 --numberOfProcessors 4  --normalizeUsing CPM --skipNonCoveredRegions  --ignoreDuplicates --filterRNAstrand reverse
+bamCoverage --bam RNA_track/PAO_filtered.bam --outFileFormat bedgraph --outFileName RNA_track/PAO_reverse_bin1000.CPM.bed --binSize 1000 --numberOfProcessors 4  --normalizeUsing CPM --skipNonCoveredRegions  --ignoreDuplicates --filterRNAstrand reverse
 ```
 
 on bascule dans R studio
@@ -131,10 +131,9 @@ install.packages("cowplot")
 library(cowplot)
 library(ggplot2)
 
-setwd("RNA_track/")
 
-rna_for=read.table("MM301_forward_bin1000.CPM.bed")
-rna_rev=read.table("MM301_reverse_bin1000.CPM.bed")
+rna_for=read.table("RNA_track/PAO_forward_bin1000.CPM.bed")
+rna_rev=read.table("RNA_track/PAO_reverse_bin1000.CPM.bed")
 
 p0 <- plotMatrix(
 	hic1,
