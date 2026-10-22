@@ -5,11 +5,12 @@
 ### récupérations des données
 
 Pour le moment, nous allons travailler avec un jeu de données du labo.
-Créer un répertoire pour y déposer les fichiers fastq et un répertoire pour le génome de référence.
+Créer un répertoire pour y déposer les fichiers fastq, un répertoire pour le génome de référence et un répertoire pour les fichiers log.
 
 ```sh
 mkdir -p fastq/
 mkdir -p ref/
+mkdir -p log/
 ```
 
 Récupérer les données correspondants en copiant les fichiers fastq.
@@ -61,7 +62,7 @@ les arguments à donner obligatoirement sont le génome (ou l'index), les fichie
 voici la commande à lancer (c'est un exemple à partir du jeu de données de Escherichia coli):
 
 ```sh
-hicstuff pipeline --genome ref/Ecoli.fa --binning 1000 --distance-law --duplicates --enzyme DpnII,HinfI --outdir hic/exemple/ --plot --prefix exemple --threads 4 --skip-count fastq/exemple_R1.fq.gz fastq/exemple_R2.fq.gz
+hicstuff pipeline --genome ref/Ecoli.fa --binning 1000 --distance-law --duplicates --enzyme DpnII,HinfI --outdir hic/exemple/ --plot --prefix exemple --threads 4 --skip-count fastq/exemple_R1.fq.gz fastq/exemple_R2.fq.gz > > log/hicstuff_v1.log 2>&1
 ```
 
 cela ne devrait pas prendre plus de 10 minutes ...  
@@ -91,18 +92,26 @@ Le format de fichier Cooler est une implémentation d'un modèle de données mat
 
 [cooler package](https://github.com/open2c/cooler)
 
+![cool_file](docs/images/cool_file.png)
+
 
 ```sh
-ls cooler -h
+cooler -h
 ```
 
 la commande dump permet notamment d'avoir accès aux tables du fichier HDF5. 
-Il y a plein d'autres commandes dans le package cooler ...
-
-![cool_file](docs/images/cool_file.png)
 
 ```sh
-ls cooler dump -t chroms hic/exemple/exemple.mcool::/resolutions/1000
+cooler dump -t chroms hic/exemple/exemple.mcool::/resolutions/1000
 ```
+
+Il y a plein d'autres commandes dans le package cooler ...
+
+![cool_file](docs/images/cooler_cmd.png)
+
+
+voici une petite liste de commande qui pourrait bien vous être utile !!
+
+
 
 
