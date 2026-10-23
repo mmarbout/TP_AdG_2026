@@ -112,6 +112,35 @@ Il y a plein d'autres commandes dans le package cooler ...
 
 voici une petite liste de commande qui pourrait bien vous être utile !!
 
+* accès aux tables:
+
+```sh
+cooler dump -t chroms hic/exemple/exemple.mcool::/resolutions/1000
+```
+
+* merge de matrice (à condition qu'elles aient été construites à partir du même génome:
+
+```sh
+cooler dump -t chroms hic/exemple/exemple.mcool::/resolutions/1000
+```
+
+* normalisation des scores d'une matrice:
+
+```sh
+cooler dump -t chroms hic/exemple/exemple.mcool::/resolutions/1000
+```
+
+* plot d'une matrice:
+
+```sh
+cooler dump -t chroms hic/exemple/exemple.mcool::/resolutions/1000
+```
+
+
+
+
+
+
 
 
 
