@@ -121,6 +121,18 @@ BiocManager::install("dplyr", ask = FALSE)
 BiocManager::install("RColorBrewer", ask = FALSE)
 ```
 
+et on vérifie que tout se charge bien
+
+
+```sh
+library(HiCExperiment)
+library(HiContacts)
+library(GenomicRanges)
+library(ggplot2)
+library(dplyr)
+
+```
+
 c'est tout bon ??
 
 alors on va pouvoir s'y mettre ...
