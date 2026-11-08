@@ -25,7 +25,7 @@ voici le tableau de vos banques avec les phénotypes, souches, conditions ...
 
 faites moi une petite analyse / interprétations de vos résultats !! 
 
-![tableau_binome](docs/images/tableau2.png)
+![tableau_binome](docs/images/data_etudiant.png)
 
 </p>
 </details>
