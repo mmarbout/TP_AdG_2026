@@ -73,6 +73,14 @@ il faut également vérifier la version que vous avez (nous devons avoir la vers
 hicstuff --version
 ```
 
+petit piège de dernière minute ... il y a eu des changements dans les dépendances de hicstuff ... nous y travaillons mais en attendant qu'une nouvelle version de notre package soit disponible, on va devoir modifier les versions de certaines dépendances.
+
+```sh
+pip install pandas==3.0.3
+pip install cooler==0.10.4
+pip install dask==2026.3.0
+```
+
 pour désactiver l'environnement, il suffit de taper la commande suivante
 
 ```sh
