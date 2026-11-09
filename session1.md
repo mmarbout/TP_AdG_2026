@@ -91,47 +91,6 @@ tinymapper --help
 micromamba deactivate
 ```
 
-c'est bon pour vous ?? allez on continue avec l'installation des packages R ...
-
-
-### installation des packages R
-
-ouvrez R studio
-
-Nous allons installer les packages R nécessaire à l'analyse des données.
-
-PS: si vous le souhaitez, voici un lien vers un tutorial du package HiCExperiment :
-[Tuto HiCExperiment](https://jserizay.com/OHCA/docs/devel/pages/data-representation.html)
-
-
-lancer R studio puis installez les packages suivant:
-
-```sh
-if (!require("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-BiocManager::install(version = "3.22")
-```
-
-```sh
-BiocManager::install("HiCExperiment", ask = FALSE)
-BiocManager::install("HiCool", ask = FALSE)
-BiocManager::install("HiContacts", ask = FALSE)
-BiocManager::install("GenomicRanges", ask = FALSE)
-BiocManager::install("dplyr", ask = FALSE)
-BiocManager::install("RColorBrewer", ask = FALSE)
-```
-
-et on vérifie que tout se charge bien
-
-
-```sh
-library(HiCExperiment)
-library(HiContacts)
-library(GenomicRanges)
-library(ggplot2)
-library(dplyr)
-
-```
 
 c'est tout bon ??
 
