@@ -23,7 +23,6 @@ scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/AdG
 il faut également récupérer le fichier FastA correspondant à notre génome de référence.
 
 ```sh
-mkdir -p ref/
 scp votrelogin@sftpcampus.pasteur.fr:/pasteur/gaia/projets/p01/Enseignements/AdG2026/TP_HiC/session2/Ecoli.fa ref/
 ```
 
