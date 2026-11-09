@@ -37,9 +37,6 @@ Plusieurs « emplacements » (c'est-à-dire des éléments d'information) sont a
 
 ```sh
 cf1
-resolution(cf1)
-pairsFile(cf1)
-metadata(cf1)
 availableResolutions(cf1)
 availableChromosomes(cf1)
 ```
