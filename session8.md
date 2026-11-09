@@ -15,7 +15,7 @@ toutes les données sont la :
 
 voici le tableau des métadonnées :
 
-![tableau_binome](docs/images/table_session8.png)
+![tableau_binome](docs/images/table_full_session8.png)
 
 
 L'objectif est de faire une présentation de 15 minutes sur cette expérience en faisant en sorte de raconter une histoire ... il y a de quoi faire ... a vous de jouer !!!
