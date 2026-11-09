@@ -24,7 +24,7 @@ library(dplyr)
 
 setwd("~/Desktop/TP_HiC/")
 
-coolf1 <-("HiC/exemple/exemple.mcool")
+coolf1 <-("hic/exemple/exemple.mcool")
 cf1 <- CoolFile(coolf1)
 ```
 
@@ -83,7 +83,7 @@ je vous laisse jouer un peu avec la fonction et realiser différentes représent
 on peut également comparer deux matrices (à condition bien sur qu'elles aient été faites a partir du même génome)
 
 ```sh
-coolf2 <-("HiC/exemple/exemple.mcool")
+coolf2 <-("hic/exemple/exemple.mcool")
 cf2 <- CoolFile(coolf2)
 hic2 <- import(cf2, resolution=5000)
 ```
@@ -132,7 +132,7 @@ hicstuff pipeline --genome ref/Ecoli.fa --binning 1000 --distance-law --filter -
 sous R studio
 
 ```sh
-coolf2 <-("HiC/exemple2/exemple2.mcool")
+coolf2 <-("hic/exemple2/exemple2.mcool")
 cf2 <- CoolFile(coolf2)
 hic2 <- import(cf2, resolution=5000)
 
