@@ -6,6 +6,9 @@
 
 on peut commencer à travailler sur nos fichiers matrices (i.e.: les fichiers cool).
 
+PS: si vous le souhaitez, voici un lien vers un tutorial du package HiCExperiment :
+[Tuto HiCExperiment](https://jserizay.com/OHCA/docs/devel/pages/data-representation.html)
+
 ```sh
 library(HiCExperiment)
 library(HiContacts)
