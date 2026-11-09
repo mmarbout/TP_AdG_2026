@@ -54,12 +54,6 @@ hic1 <- import(cf1, resolution=5000)
 interactions(hic1)
 ```
 
-il est ensuite possible de mettre ces données sous forme de data frame.
-
-```sh
-data <- as.data.frame(hic1)
-```
-
 on peut également importer les données uniquement pour une région donnée:
 
 ```sh
