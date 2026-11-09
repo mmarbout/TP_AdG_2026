@@ -25,6 +25,8 @@ voici le tableau de vos banques avec les phénotypes, souches, conditions ...
 
 faites moi une petite analyse / interprétations de vos résultats !! 
 
+vous trouverez également dans le répertoire [/pasteur/gaia/projets/p01/Enseignements/AdG2026/TP_HiC/session4/] , une banque, nommée PAO_wt (R1 et R2), qui a été faite au laboratoire avec le dernier protocole, faites en une comparaison avec vos banques.
+
 ![tableau_binome](docs/images/data_etudiant.png)
 
 </p>
