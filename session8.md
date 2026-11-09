@@ -13,7 +13,7 @@ vous allez travailler en groupe sur un jeu de données provenant d'expérience o
 toutes les données sont la :
 
 
-voici le tableau des métadonnées :
+voici le tableau des données dont vous disposez:
 
 ![tableau_binome](docs/images/table_full_session8.png)
 
