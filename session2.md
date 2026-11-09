@@ -8,6 +8,7 @@ Pour le moment, nous allons travailler avec un jeu de données du labo.
 Créer un répertoire pour y déposer les fichiers fastq, un répertoire pour le génome de référence et un répertoire pour les fichiers log.
 
 ```sh
+cd ~/Desktop/TP_HiC/
 mkdir -p fastq/
 mkdir -p ref/
 mkdir -p log/
@@ -36,10 +37,9 @@ voici un schéma du pipeline:
 
 ![hicstuff](docs/images/pipeline.svg)
 
-on n'oublie pas de se mettre dans le bon répertoire et d'activer l'environnement
+on n'oublie pas d'activer l'environnement
 
 ```sh
-cd ~/Bureau/TP_HiC/
 micromamba activate hicstuff
 ```
 
@@ -62,7 +62,7 @@ les arguments à donner obligatoirement sont le génome (ou l'index), les fichie
 voici la commande à lancer (c'est un exemple à partir du jeu de données de Escherichia coli):
 
 ```sh
-hicstuff pipeline --genome ref/Ecoli.fa --binning 1000 --distance-law --duplicates --enzyme DpnII,HinfI --outdir hic/exemple/ --plot --prefix exemple --threads 4 --skip-count fastq/exemple_R1.fq.gz fastq/exemple_R2.fq.gz > > log/hicstuff_v1.log 2>&1
+hicstuff pipeline --genome ref/Ecoli.fa --binning 1000 --distance-law --duplicates --enzyme DpnII,HinfI --outdir hic/exemple/ --plot --prefix exemple --threads 4 --skip-count fastq/exemple_R1.fq.gz fastq/exemple_R2.fq.gz > log/hicstuff_v1.log 2>&1
 ```
 
 cela ne devrait pas prendre plus de 10 minutes ...  
@@ -112,28 +112,34 @@ Il y a plein d'autres commandes dans le package cooler ...
 
 voici une petite liste de commande qui pourrait bien vous être utile !!
 
-* accès aux tables:
+* accès aux tables (chroms, bins, pixels ...) - ici l'exemple est pour :
 
 ```sh
-cooler dump -t chroms hic/exemple/exemple.mcool::/resolutions/1000
+cooler dump --join hic/exemple/exemple.mcool::/resolutions/1000 | head
 ```
 
 * merge de matrice (à condition qu'elles aient été construites à partir du même génome:
 
 ```sh
-cooler dump -t chroms hic/exemple/exemple.mcool::/resolutions/1000
+cooler merge bq_merge.cool bq1.mcool::/resolutions/1000 bq2.mcool::/resolutions/1000
+```
+
+* création d'une matrice à résolution multiple (type mcool):
+
+```sh
+cooler zoomify --balance -o banque_multi.mcool banque.cool
 ```
 
 * normalisation des scores d'une matrice:
 
 ```sh
-cooler dump -t chroms hic/exemple/exemple.mcool::/resolutions/1000
+cooler balance hic/exemple/exemple.mcool::/resolutions/1000
 ```
 
 * plot d'une matrice:
 
 ```sh
-cooler dump -t chroms hic/exemple/exemple.mcool::/resolutions/1000
+cooler show hic/exemple/exemple.mcool::/resolutions/1000 
 ```
 
 
