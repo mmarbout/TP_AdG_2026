@@ -104,7 +104,6 @@ sortez de R studio et retournez sur le terminal.
 activez l'environnement hicstuff et refaites tourner le pipeline en activant l'option --filter
 
 * Q: Quels filtres le pipeline a appliqué sur les données ?
-* Q: Quels est le taux de reads conservées après le filtre de vos données ?
 
 <details><summary>Solution</summary>
 <p>
@@ -115,9 +114,19 @@ activez l'environnement hicstuff et refaites tourner le pipeline en activant l'o
 </details>
 
 
+* Q: Quels est le taux de reads conservées après le filtre de vos données ?
+
+
 maintenant, retournez sous R et comparez vos deux matrices (unfilter vs. filter)
 
 
+<details><summary>Solution</summary>
+<p>
+
+![filer](docs/images/filter.png)
+
+</p>
+</details>
 
 
 
