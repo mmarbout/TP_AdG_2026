@@ -123,7 +123,27 @@ maintenant, retournez sous R et comparez vos deux matrices (unfilter vs. filter)
 <details><summary>Solution</summary>
 <p>
 
-![filer](docs/images/filter.png)
+dans le terminal
+
+```sh
+hicstuff pipeline --genome ref/Ecoli.fa --binning 1000 --distance-law --filter --duplicates --enzyme DpnII,HinfI --outdir hic/exemple2/ --plot --prefix exemple2 --threads 4 --skip-count fastq/exemple_R1.fq.gz fastq/exemple_R2.fq.gz > log/hicstuff_v2.log 2>&1
+```
+
+sous R studio
+
+```sh
+coolf2 <-("HiC/exemple2/exemple2.mcool")
+cf2 <- CoolFile(coolf2)
+hic2 <- import(cf2, resolution=5000)
+
+div_contacts <- divide(hic2, by = hic1)
+plotMatrix(div_contacts,
+    use.scores = 'balanced.fc', 
+        scale = 'log2', 
+        limits = c(-1, 1),
+        cmap = bwrColors()
+    )
+```
 
 </p>
 </details>
