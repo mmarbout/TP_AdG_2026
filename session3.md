@@ -6,6 +6,10 @@
 
 on peut commencer à travailler sur nos fichiers matrices (i.e.: les fichiers cool).
 
+Pour cela, nous allons travailler sous R studio avec différents packages développés au laboratoire.
+
+lancer R studio
+
 PS: si vous le souhaitez, voici un lien vers un tutorial du package HiCExperiment :
 [Tuto HiCExperiment](https://jserizay.com/OHCA/docs/devel/pages/data-representation.html)
 
@@ -16,6 +20,7 @@ library(GenomicRanges)
 library(ggplot2)
 library(dplyr)
 
+setwd("~/Desktop/TP_HiC/")
 
 coolf1 <-("HiC/exemple/exemple.mcool")
 cf1 <- CoolFile(coolf1)
